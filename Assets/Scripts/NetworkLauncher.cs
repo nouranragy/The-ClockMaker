@@ -11,11 +11,12 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        PhotonNetwork.JoinOrCreateRoom("GlobalChatRoom", new RoomOptions { MaxPlayers = 20 }, TypedLobby.Default);
+        // Set MaxPlayers = 2 to cap room size strictly for 2 players
+        PhotonNetwork.JoinOrCreateRoom("GlobalChatRoom", new RoomOptions { MaxPlayers = 2 }, TypedLobby.Default);
     }
 
     public override void OnJoinedRoom()
     {
-        Debug.Log("Connected to Chat Room!");
+        Debug.Log("Connected to Chat Room! Current Players: " + PhotonNetwork.CurrentRoom.PlayerCount);
     }
 }
