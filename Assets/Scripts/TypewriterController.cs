@@ -12,7 +12,7 @@ public class TypewriterController : MonoBehaviourPun
 
     void Start()
 {
-    // لو اللعبة مش متصلة بسيرفر فوتون، بنفعل الأوفلاين مود عشان الـ RPC يشتغل محلياً للتست
+  
     if (!PhotonNetwork.IsConnected)
     {
         PhotonNetwork.OfflineMode = true;

@@ -4654,7 +4654,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 500349581}
         m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
         m_MethodName: SendChatMessage
         m_Mode: 1
