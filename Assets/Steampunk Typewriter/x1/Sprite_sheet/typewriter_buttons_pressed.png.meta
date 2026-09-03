@@ -1,0 +1,1313 @@
+fileFormatVersion: 2
+guid: 63245c95f2864d943907e42e953b0bdd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -655746015490953761
+    second: typewriter_buttons_pressed_0
+  - first:
+      213: 4028649440790266518
+    second: typewriter_buttons_pressed_1
+  - first:
+      213: -8711328633717172623
+    second: typewriter_buttons_pressed_2
+  - first:
+      213: -3252345656152511825
+    second: typewriter_buttons_pressed_3
+  - first:
+      213: 5186896527428217190
+    second: typewriter_buttons_pressed_4
+  - first:
+      213: 655924217319521553
+    second: typewriter_buttons_pressed_5
+  - first:
+      213: 8581576885283974936
+    second: typewriter_buttons_pressed_6
+  - first:
+      213: -6240898807271534546
+    second: typewriter_buttons_pressed_7
+  - first:
+      213: 3222733095585927685
+    second: typewriter_buttons_pressed_8
+  - first:
+      213: 954371090627059577
+    second: typewriter_buttons_pressed_9
+  - first:
+      213: -703554930229899085
+    second: typewriter_buttons_pressed_10
+  - first:
+      213: 641881288682517916
+    second: typewriter_buttons_pressed_11
+  - first:
+      213: -6952784233383019537
+    second: typewriter_buttons_pressed_12
+  - first:
+      213: -3410687364839350094
+    second: typewriter_buttons_pressed_13
+  - first:
+      213: -2090221722430581098
+    second: typewriter_buttons_pressed_14
+  - first:
+      213: 5507618255175649298
+    second: typewriter_buttons_pressed_15
+  - first:
+      213: -6586838886627976427
+    second: typewriter_buttons_pressed_16
+  - first:
+      213: 5643714827538515324
+    second: typewriter_buttons_pressed_17
+  - first:
+      213: -1665288276462194001
+    second: typewriter_buttons_pressed_18
+  - first:
+      213: -3888662116025934006
+    second: typewriter_buttons_pressed_19
+  - first:
+      213: 2792761381262536387
+    second: typewriter_buttons_pressed_20
+  - first:
+      213: -5430463033686706091
+    second: typewriter_buttons_pressed_21
+  - first:
+      213: 3678638027513744833
+    second: typewriter_buttons_pressed_22
+  - first:
+      213: -5537145877955101506
+    second: typewriter_buttons_pressed_23
+  - first:
+      213: 8714462232823202610
+    second: typewriter_buttons_pressed_24
+  - first:
+      213: 5755011691997452881
+    second: typewriter_buttons_pressed_25
+  - first:
+      213: -4953781633760653882
+    second: typewriter_buttons_pressed_26
+  - first:
+      213: 6134472620339674296
+    second: typewriter_buttons_pressed_27
+  - first:
+      213: 8652895882726762727
+    second: typewriter_buttons_pressed_28
+  - first:
+      213: 2807452831428117022
+    second: typewriter_buttons_pressed_29
+  - first:
+      213: -5890355801643187107
+    second: typewriter_buttons_pressed_30
+  - first:
+      213: -6082448408891253387
+    second: typewriter_buttons_pressed_31
+  - first:
+      213: 6228621864141170905
+    second: typewriter_buttons_pressed_32
+  - first:
+      213: 5954170585630578078
+    second: typewriter_buttons_pressed_33
+  - first:
+      213: 7347158412088364759
+    second: typewriter_buttons_pressed_34
+  - first:
+      213: -4730230588529935451
+    second: typewriter_buttons_pressed_35
+  - first:
+      213: -6910650217714914732
+    second: typewriter_buttons_pressed_36
+  - first:
+      213: 8148647551412632295
+    second: typewriter_buttons_pressed_37
+  - first:
+      213: -5810546890046635783
+    second: typewriter_buttons_pressed_38
+  - first:
+      213: -8864234956446378434
+    second: typewriter_buttons_pressed_39
+  - first:
+      213: -4405809307151147761
+    second: typewriter_buttons_pressed_40
+  - first:
+      213: 6719506829987273932
+    second: typewriter_buttons_pressed_41
+  - first:
+      213: -3538735800941313172
+    second: typewriter_buttons_pressed_42
+  - first:
+      213: -148564612750178955
+    second: typewriter_buttons_pressed_43
+  - first:
+      213: 5758819856058268076
+    second: typewriter_buttons_pressed_44
+  - first:
+      213: -8026011959098677849
+    second: typewriter_buttons_pressed_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdda8c3297256e6f0800000000000000
+      internalID: -655746015490953761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69241ea5253a8e730800000000000000
+      internalID: 4028649440790266518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 176599123c42b1780800000000000000
+      internalID: -8711328633717172623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faaae3e7bd85dd2d0800000000000000
+      internalID: -3252345656152511825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669e01c09ee8bf740800000000000000
+      internalID: 5186896527428217190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11df7e4b99f4a1900800000000000000
+      internalID: 655924217319521553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fed04c5b2e71770800000000000000
+      internalID: 8581576885283974936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20db69b99fd369a0800000000000000
+      internalID: -6240898807271534546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5025b48fca279bc20800000000000000
+      internalID: 3222733095585927685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f5ab0537b9e3d00800000000000000
+      internalID: 954371090627059577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_10
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b01cafb4887c36f0800000000000000
+      internalID: -703554930229899085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_11
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9534e791ab68e800800000000000000
+      internalID: 641881288682517916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_12
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: febb441c39fb28f90800000000000000
+      internalID: -6952784233383019537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_13
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b066da89edcaa0d0800000000000000
+      internalID: -3410687364839350094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_14
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69658bcfa6a0ef2e0800000000000000
+      internalID: -2090221722430581098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_15
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 218833a5f9dfe6c40800000000000000
+      internalID: 5507618255175649298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b5fc16ee8d694a0800000000000000
+      internalID: -6586838886627976427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_17
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75c905ebb0825e40800000000000000
+      internalID: 5643714827538515324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_18
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa239d8b225b3e8e0800000000000000
+      internalID: -1665288276462194001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_19
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f51c29862b80ac0800000000000000
+      internalID: -3888662116025934006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_20
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce2598fda1e1c620800000000000000
+      internalID: 2792761381262536387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_21
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558b63784ae13a4b0800000000000000
+      internalID: -5430463033686706091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_22
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd4337bbc52d0330800000000000000
+      internalID: 3678638027513744833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_23
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebcb7fa392b1823b0800000000000000
+      internalID: -5537145877955101506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2330cf3ca3dffe870800000000000000
+      internalID: 8714462232823202610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a5abb74a8eddf40800000000000000
+      internalID: 5755011691997452881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_26
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd87d0b9d1a04bb0800000000000000
+      internalID: -4953781633760653882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_27
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcb4bba856022550800000000000000
+      internalID: 6134472620339674296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_28
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e86e58d5f2451870800000000000000
+      internalID: 8652895882726762727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_29
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1200f4c97316f620800000000000000
+      internalID: 2807452831428117022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_30
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54856a5b90414ea0800000000000000
+      internalID: -5890355801643187107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_31
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d9567f56dc69ba0800000000000000
+      internalID: -6082448408891253387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8ad54b592807650800000000000000
+      internalID: 6228621864141170905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_33
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e951790e99671a250800000000000000
+      internalID: 5954170585630578078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_34
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7decc0d16a956f560800000000000000
+      internalID: 7347158412088364759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_35
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab7cf07758da5eb0800000000000000
+      internalID: -4730230588529935451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_36
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a602ebd307810a0800000000000000
+      internalID: -6910650217714914732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_37
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea7ecd46cfc51170800000000000000
+      internalID: 8148647551412632295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_38
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0050c936acc5fa0800000000000000
+      internalID: -5810546890046635783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_39
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36d9679549ebf480800000000000000
+      internalID: -8864234956446378434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_40
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d552337cb6bd2c0800000000000000
+      internalID: -4405809307151147761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_41
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cccd3334cdb704d50800000000000000
+      internalID: 6719506829987273932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_42
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c638feeb982e3eec0800000000000000
+      internalID: -3538735800941313172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_43
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57505d6954130fdf0800000000000000
+      internalID: -148564612750178955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_44
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9b1d5c5207bef40800000000000000
+      internalID: 5758819856058268076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: typewriter_buttons_pressed_45
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5e2e695a0ed9090800000000000000
+      internalID: -8026011959098677849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      typewriter_buttons_pressed_0: -655746015490953761
+      typewriter_buttons_pressed_1: 4028649440790266518
+      typewriter_buttons_pressed_10: -703554930229899085
+      typewriter_buttons_pressed_11: 641881288682517916
+      typewriter_buttons_pressed_12: -6952784233383019537
+      typewriter_buttons_pressed_13: -3410687364839350094
+      typewriter_buttons_pressed_14: -2090221722430581098
+      typewriter_buttons_pressed_15: 5507618255175649298
+      typewriter_buttons_pressed_16: -6586838886627976427
+      typewriter_buttons_pressed_17: 5643714827538515324
+      typewriter_buttons_pressed_18: -1665288276462194001
+      typewriter_buttons_pressed_19: -3888662116025934006
+      typewriter_buttons_pressed_2: -8711328633717172623
+      typewriter_buttons_pressed_20: 2792761381262536387
+      typewriter_buttons_pressed_21: -5430463033686706091
+      typewriter_buttons_pressed_22: 3678638027513744833
+      typewriter_buttons_pressed_23: -5537145877955101506
+      typewriter_buttons_pressed_24: 8714462232823202610
+      typewriter_buttons_pressed_25: 5755011691997452881
+      typewriter_buttons_pressed_26: -4953781633760653882
+      typewriter_buttons_pressed_27: 6134472620339674296
+      typewriter_buttons_pressed_28: 8652895882726762727
+      typewriter_buttons_pressed_29: 2807452831428117022
+      typewriter_buttons_pressed_3: -3252345656152511825
+      typewriter_buttons_pressed_30: -5890355801643187107
+      typewriter_buttons_pressed_31: -6082448408891253387
+      typewriter_buttons_pressed_32: 6228621864141170905
+      typewriter_buttons_pressed_33: 5954170585630578078
+      typewriter_buttons_pressed_34: 7347158412088364759
+      typewriter_buttons_pressed_35: -4730230588529935451
+      typewriter_buttons_pressed_36: -6910650217714914732
+      typewriter_buttons_pressed_37: 8148647551412632295
+      typewriter_buttons_pressed_38: -5810546890046635783
+      typewriter_buttons_pressed_39: -8864234956446378434
+      typewriter_buttons_pressed_4: 5186896527428217190
+      typewriter_buttons_pressed_40: -4405809307151147761
+      typewriter_buttons_pressed_41: 6719506829987273932
+      typewriter_buttons_pressed_42: -3538735800941313172
+      typewriter_buttons_pressed_43: -148564612750178955
+      typewriter_buttons_pressed_44: 5758819856058268076
+      typewriter_buttons_pressed_45: -8026011959098677849
+      typewriter_buttons_pressed_5: 655924217319521553
+      typewriter_buttons_pressed_6: 8581576885283974936
+      typewriter_buttons_pressed_7: -6240898807271534546
+      typewriter_buttons_pressed_8: 3222733095585927685
+      typewriter_buttons_pressed_9: 954371090627059577
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
