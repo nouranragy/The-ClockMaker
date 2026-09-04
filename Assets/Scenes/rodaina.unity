@@ -833,6 +833,7 @@ Transform:
   - {fileID: 1927375678}
   - {fileID: 1971703886}
   - {fileID: 1255143730}
+  - {fileID: 1859922216}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &488402629
@@ -3394,6 +3395,14 @@ PrefabInstance:
     - target: {fileID: 165795438603434259, guid: 7ac6e5babaaf9bd47beb51c1cf696911, type: 3}
       propertyPath: sceneViewId
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487156251566682536, guid: 7ac6e5babaaf9bd47beb51c1cf696911, type: 3}
+      propertyPath: openRotation.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487156251566682536, guid: 7ac6e5babaaf9bd47beb51c1cf696911, type: 3}
+      propertyPath: openRotation.y
+      value: -55
       objectReference: {fileID: 0}
     - target: {fileID: 3328375465867657325, guid: 7ac6e5babaaf9bd47beb51c1cf696911, type: 3}
       propertyPath: sceneViewId
