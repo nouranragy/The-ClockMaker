@@ -6,17 +6,32 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
 {
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        if (!PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.ConnectUsingSettings();
+        }
     }
 
     public override void OnConnectedToMaster()
     {
-        // Set MaxPlayers = 2 to cap room size strictly for 2 players
-        PhotonNetwork.JoinOrCreateRoom("GlobalChatRoom", new RoomOptions { MaxPlayers = 2 }, TypedLobby.Default);
+        Debug.Log("Connected to Master Server!");
+        PhotonNetwork.JoinLobby();
     }
 
+    public override void OnJoinedLobby()
+    {
+        Debug.Log("Joined Lobby! Now safe to join or create a room.");
+        JoinRoom();
+    }
+
+    public void JoinRoom()
+    {
+        if (PhotonNetwork.NetworkClientState == ClientState.Joining || PhotonNetwork.InRoom) return;
+        RoomOptions roomOptions = new RoomOptions { MaxPlayers = 2 };
+        PhotonNetwork.JoinOrCreateRoom("PuzzleRoom", roomOptions, TypedLobby.Default);
+    }
     public override void OnJoinedRoom()
     {
-        Debug.Log("Connected to Chat Room! Current Players: " + PhotonNetwork.CurrentRoom.PlayerCount);
+        Debug.Log("Successfully joined room!");
     }
 }
