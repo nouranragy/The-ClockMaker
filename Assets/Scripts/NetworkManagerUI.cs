@@ -9,8 +9,6 @@ public class ConnectUiScript : MonoBehaviour
 
     private void Start()
     {
-        /*hostButton.onClick.AddListener(HostButtonOnClick);
-        clientButton.onClick.AddListener(ClientButtonOnClick); don't need those rn*/
     }
 
     private void HostButtonOnClick()

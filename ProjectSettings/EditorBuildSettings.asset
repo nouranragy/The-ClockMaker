@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/rodaina.unity
-    guid: 3287120c9fa4bf24fa0b33c7513da435
+    path: Assets/Scenes/playButton.unity
+    guid: 69288da02bef15f48af3b6a887f9c351
   - enabled: 1
     path: Assets/Scenes/Past.unity
     guid: d7631bfa7f3299c43aa864c9e221fee2
+  - enabled: 1
+    path: Assets/Scenes/Present.unity
+    guid: 17e423e5279aba648ab62d4f709841be
+  - enabled: 1
+    path: Assets/Scenes/rodaina.unity
+    guid: 3287120c9fa4bf24fa0b33c7513da435
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
