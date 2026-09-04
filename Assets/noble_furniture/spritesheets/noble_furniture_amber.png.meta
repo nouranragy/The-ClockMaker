@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: ff53c5200b3c0004aa22ac529f3ccd16
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7026177552317895946
+    second: noble_furniture_amber_0
+  - first:
+      213: -4120024102862690273
+    second: noble_furniture_amber_1
+  - first:
+      213: 7291981372814684546
+    second: noble_furniture_amber_2
+  - first:
+      213: 2585143024446527972
+    second: noble_furniture_amber_3
+  - first:
+      213: -6960647992937105367
+    second: noble_furniture_amber_4
+  - first:
+      213: -6126046486498380391
+    second: noble_furniture_amber_5
+  - first:
+      213: 1181062724062267745
+    second: noble_furniture_amber_6
+  - first:
+      213: -8400400017688497792
+    second: noble_furniture_amber_7
+  - first:
+      213: -2034741987491706080
+    second: noble_furniture_amber_8
+  - first:
+      213: 5501196429542776450
+    second: noble_furniture_amber_9
+  - first:
+      213: 4353984180700992085
+    second: noble_furniture_amber_10
+  - first:
+      213: 44740418955188365
+    second: noble_furniture_amber_11
+  - first:
+      213: 2681716645608342391
+    second: noble_furniture_amber_12
+  - first:
+      213: 9092980382984567097
+    second: noble_furniture_amber_13
+  - first:
+      213: 6707718781750998124
+    second: noble_furniture_amber_14
+  - first:
+      213: 2404781919514848123
+    second: noble_furniture_amber_15
+  - first:
+      213: 4300788091326989840
+    second: noble_furniture_amber_16
+  - first:
+      213: 3288222389100081000
+    second: noble_furniture_amber_17
+  - first:
+      213: -3522426071553404539
+    second: noble_furniture_amber_18
+  - first:
+      213: 3015336439786950877
+    second: noble_furniture_amber_19
+  - first:
+      213: 939905237799539321
+    second: noble_furniture_amber_20
+  - first:
+      213: 1446587965177250593
+    second: noble_furniture_amber_21
+  - first:
+      213: 8592225046465519598
+    second: noble_furniture_amber_22
+  - first:
+      213: 506758166491079165
+    second: noble_furniture_amber_23
+  - first:
+      213: -1029469985193766994
+    second: noble_furniture_amber_24
+  - first:
+      213: -2810186336986140474
+    second: noble_furniture_amber_25
+  - first:
+      213: 5119517263517727666
+    second: noble_furniture_amber_26
+  - first:
+      213: 2533548357726516217
+    second: noble_furniture_amber_27
+  - first:
+      213: -4582450191951289594
+    second: noble_furniture_amber_28
+  - first:
+      213: 7884228503221780811
+    second: noble_furniture_amber_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: noble_furniture_amber_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 255
+        width: 62
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a055bbee14ff18160800000000000000
+      internalID: 7026177552317895946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 255
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1862d248ebb2d6c0800000000000000
+      internalID: -4120024102862690273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 255
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281726b8c62523560800000000000000
+      internalID: 7291981372814684546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 255
+        width: 56
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9d6b152e540e320800000000000000
+      internalID: 2585143024446527972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 255
+        width: 60
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928b27e878fc66f90800000000000000
+      internalID: -6960647992937105367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 255
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995fbbe7d29ebfaa0800000000000000
+      internalID: -6126046486498380391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 191
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169cf2d3a4af36010800000000000000
+      internalID: 1181062724062267745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 191
+        width: 62
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081fd7ee0b8cb6b80800000000000000
+      internalID: -8400400017688497792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 191
+        width: 48
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b0cf161f423c3e0800000000000000
+      internalID: -2034741987491706080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 191
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e5b8e810d285c40800000000000000
+      internalID: 5501196429542776450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_10
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 191
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5525a504b857c6c30800000000000000
+      internalID: 4353984180700992085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_11
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 191
+        width: 60
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d881dea8c23fe9000800000000000000
+      internalID: 44740418955188365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 127
+        width: 60
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773ccb1b41f573520800000000000000
+      internalID: 2681716645608342391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 127
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939f36d4b71c03e70800000000000000
+      internalID: 9092980382984567097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 127
+        width: 62
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64fb7761ba961d50800000000000000
+      internalID: 6707718781750998124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_15
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 127
+        width: 62
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7be6fa2a608f5120800000000000000
+      internalID: 2404781919514848123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_16
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 127
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01686c58bf77fab30800000000000000
+      internalID: 4300788091326989840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 63
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86febc457dc12ad20800000000000000
+      internalID: 3288222389100081000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_18
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 128
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5811c798624dd1fc0800000000000000
+      internalID: -3522426071553404539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 64
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0dacb1480a8d920800000000000000
+      internalID: 3015336439786950877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_20
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 63
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972129d75d63b0d00800000000000000
+      internalID: 939905237799539321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_21
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123ceb80710531410800000000000000
+      internalID: 1446587965177250593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_22
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 63
+        width: 26
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef9accf727bd3770800000000000000
+      internalID: 8592225046465519598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_23
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 63
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1aab41edd580700800000000000000
+      internalID: 506758166491079165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_24
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 63
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf4999b08696b1f0800000000000000
+      internalID: -1029469985193766994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 62
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0f84f5a663009d0800000000000000
+      internalID: -2810186336986140474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_26
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb3479a3dd2c0740800000000000000
+      internalID: 5119517263517727666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_27
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 60
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3309bdec8f82320800000000000000
+      internalID: 2533548357726516217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_28
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603a2db44ddd760c0800000000000000
+      internalID: -4582450191951289594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_amber_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b414b8e1d086a6d60800000000000000
+      internalID: 7884228503221780811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      noble_furniture_amber_0: 7026177552317895946
+      noble_furniture_amber_1: -4120024102862690273
+      noble_furniture_amber_10: 4353984180700992085
+      noble_furniture_amber_11: 44740418955188365
+      noble_furniture_amber_12: 2681716645608342391
+      noble_furniture_amber_13: 9092980382984567097
+      noble_furniture_amber_14: 6707718781750998124
+      noble_furniture_amber_15: 2404781919514848123
+      noble_furniture_amber_16: 4300788091326989840
+      noble_furniture_amber_17: 3288222389100081000
+      noble_furniture_amber_18: -3522426071553404539
+      noble_furniture_amber_19: 3015336439786950877
+      noble_furniture_amber_2: 7291981372814684546
+      noble_furniture_amber_20: 939905237799539321
+      noble_furniture_amber_21: 1446587965177250593
+      noble_furniture_amber_22: 8592225046465519598
+      noble_furniture_amber_23: 506758166491079165
+      noble_furniture_amber_24: -1029469985193766994
+      noble_furniture_amber_25: -2810186336986140474
+      noble_furniture_amber_26: 5119517263517727666
+      noble_furniture_amber_27: 2533548357726516217
+      noble_furniture_amber_28: -4582450191951289594
+      noble_furniture_amber_29: 7884228503221780811
+      noble_furniture_amber_3: 2585143024446527972
+      noble_furniture_amber_4: -6960647992937105367
+      noble_furniture_amber_5: -6126046486498380391
+      noble_furniture_amber_6: 1181062724062267745
+      noble_furniture_amber_7: -8400400017688497792
+      noble_furniture_amber_8: -2034741987491706080
+      noble_furniture_amber_9: 5501196429542776450
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

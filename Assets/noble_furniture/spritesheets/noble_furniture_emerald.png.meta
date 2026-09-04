@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: 6237befc9f7efed4485494327d581ae9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 90211078305647072
+    second: noble_furniture_emerald_0
+  - first:
+      213: 4655398416856057785
+    second: noble_furniture_emerald_1
+  - first:
+      213: 2383933007694083227
+    second: noble_furniture_emerald_2
+  - first:
+      213: -3738639553690817749
+    second: noble_furniture_emerald_3
+  - first:
+      213: -6435110018178649139
+    second: noble_furniture_emerald_4
+  - first:
+      213: -1505084073933815964
+    second: noble_furniture_emerald_5
+  - first:
+      213: -4854160452176369501
+    second: noble_furniture_emerald_6
+  - first:
+      213: -597375738368452441
+    second: noble_furniture_emerald_7
+  - first:
+      213: -2537261191043175087
+    second: noble_furniture_emerald_8
+  - first:
+      213: 7581353226025118455
+    second: noble_furniture_emerald_9
+  - first:
+      213: 4948683190743310537
+    second: noble_furniture_emerald_10
+  - first:
+      213: -2776331272757279213
+    second: noble_furniture_emerald_11
+  - first:
+      213: -8343788680823642174
+    second: noble_furniture_emerald_12
+  - first:
+      213: -4172242759501303824
+    second: noble_furniture_emerald_13
+  - first:
+      213: 1557633018376898658
+    second: noble_furniture_emerald_14
+  - first:
+      213: 416677353499553892
+    second: noble_furniture_emerald_15
+  - first:
+      213: 6215639923643082716
+    second: noble_furniture_emerald_16
+  - first:
+      213: -2352829114061804265
+    second: noble_furniture_emerald_17
+  - first:
+      213: -1328633654244201136
+    second: noble_furniture_emerald_18
+  - first:
+      213: -2929510541051555187
+    second: noble_furniture_emerald_19
+  - first:
+      213: -9036224435510416926
+    second: noble_furniture_emerald_20
+  - first:
+      213: -8177852523887583436
+    second: noble_furniture_emerald_21
+  - first:
+      213: -4624455222461481330
+    second: noble_furniture_emerald_22
+  - first:
+      213: 7367527403778959987
+    second: noble_furniture_emerald_23
+  - first:
+      213: 2906818946930760007
+    second: noble_furniture_emerald_24
+  - first:
+      213: 1781777431936900625
+    second: noble_furniture_emerald_25
+  - first:
+      213: 3773223707244641573
+    second: noble_furniture_emerald_26
+  - first:
+      213: 1847218747297467491
+    second: noble_furniture_emerald_27
+  - first:
+      213: 4006394412068224954
+    second: noble_furniture_emerald_28
+  - first:
+      213: -3360214522596534528
+    second: noble_furniture_emerald_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: noble_furniture_emerald_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 255
+        width: 62
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9863d6f7e704100800000000000000
+      internalID: 90211078305647072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 255
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b70f9cd13c4b9040800000000000000
+      internalID: 4655398416856057785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 255
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b943feb907e651120800000000000000
+      internalID: 2383933007694083227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 255
+        width: 56
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ba803522fad1cc0800000000000000
+      internalID: -3738639553690817749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 255
+        width: 60
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc377eb7885e1b6a0800000000000000
+      internalID: -6435110018178649139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 255
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46fb310520edc1be0800000000000000
+      internalID: -1505084073933815964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 191
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8274589ce82acb0800000000000000
+      internalID: -4854160452176369501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 191
+        width: 62
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a89c155ee1b5b7f0800000000000000
+      internalID: -597375738368452441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 191
+        width: 48
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15dac75c366d9ccd0800000000000000
+      internalID: -2537261191043175087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 191
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa2df16790663960800000000000000
+      internalID: 7581353226025118455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_10
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 191
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0a33a84214da440800000000000000
+      internalID: 4948683190743310537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_11
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 191
+        width: 60
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3168e74ca6d7879d0800000000000000
+      internalID: -2776331272757279213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 127
+        width: 60
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7e49ee668e43c80800000000000000
+      internalID: -8343788680823642174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 127
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffaa33d0573916c0800000000000000
+      internalID: -4172242759501303824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 127
+        width: 62
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26846ce3af2dd9510800000000000000
+      internalID: 1557633018376898658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_15
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 127
+        width: 62
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4607a4968d558c500800000000000000
+      internalID: 416677353499553892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_16
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 127
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd76b742493624650800000000000000
+      internalID: 6215639923643082716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 63
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d2627f262195fd0800000000000000
+      internalID: -2352829114061804265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_18
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 128
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d252a1bbebf8de0800000000000000
+      internalID: -1328633654244201136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 64
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d821cd22fa94857d0800000000000000
+      internalID: -2929510541051555187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_20
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 63
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e962ba70c1e89280800000000000000
+      internalID: -9036224435510416926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_21
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f1628257e628e80800000000000000
+      internalID: -8177852523887583436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_22
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 63
+        width: 26
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ebb710a72a2dfb0800000000000000
+      internalID: -4624455222461481330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_23
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 63
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a633f8327be3660800000000000000
+      internalID: 7367527403778959987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_24
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 63
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749de266e68175820800000000000000
+      internalID: 2906818946930760007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 62
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e186352252ab810800000000000000
+      internalID: 1781777431936900625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_26
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d366868fe2d5430800000000000000
+      internalID: 3773223707244641573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_27
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 60
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36c8b17e9a3a2a910800000000000000
+      internalID: 1847218747297467491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_28
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abfbf61bd72999730800000000000000
+      internalID: 4006394412068224954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_emerald_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0075683e1be1e51d0800000000000000
+      internalID: -3360214522596534528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      noble_furniture_emerald_0: 90211078305647072
+      noble_furniture_emerald_1: 4655398416856057785
+      noble_furniture_emerald_10: 4948683190743310537
+      noble_furniture_emerald_11: -2776331272757279213
+      noble_furniture_emerald_12: -8343788680823642174
+      noble_furniture_emerald_13: -4172242759501303824
+      noble_furniture_emerald_14: 1557633018376898658
+      noble_furniture_emerald_15: 416677353499553892
+      noble_furniture_emerald_16: 6215639923643082716
+      noble_furniture_emerald_17: -2352829114061804265
+      noble_furniture_emerald_18: -1328633654244201136
+      noble_furniture_emerald_19: -2929510541051555187
+      noble_furniture_emerald_2: 2383933007694083227
+      noble_furniture_emerald_20: -9036224435510416926
+      noble_furniture_emerald_21: -8177852523887583436
+      noble_furniture_emerald_22: -4624455222461481330
+      noble_furniture_emerald_23: 7367527403778959987
+      noble_furniture_emerald_24: 2906818946930760007
+      noble_furniture_emerald_25: 1781777431936900625
+      noble_furniture_emerald_26: 3773223707244641573
+      noble_furniture_emerald_27: 1847218747297467491
+      noble_furniture_emerald_28: 4006394412068224954
+      noble_furniture_emerald_29: -3360214522596534528
+      noble_furniture_emerald_3: -3738639553690817749
+      noble_furniture_emerald_4: -6435110018178649139
+      noble_furniture_emerald_5: -1505084073933815964
+      noble_furniture_emerald_6: -4854160452176369501
+      noble_furniture_emerald_7: -597375738368452441
+      noble_furniture_emerald_8: -2537261191043175087
+      noble_furniture_emerald_9: 7581353226025118455
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
