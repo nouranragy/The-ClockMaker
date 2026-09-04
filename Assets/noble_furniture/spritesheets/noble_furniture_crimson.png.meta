@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: b0184e5b865660240a80fcfa9f29fdd8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1481782813521052129
+    second: noble_furniture_crimson_0
+  - first:
+      213: -7600900813782084626
+    second: noble_furniture_crimson_1
+  - first:
+      213: 51764913029354845
+    second: noble_furniture_crimson_2
+  - first:
+      213: 3254667583279995078
+    second: noble_furniture_crimson_3
+  - first:
+      213: -4079332996971474171
+    second: noble_furniture_crimson_4
+  - first:
+      213: 6344589561081644160
+    second: noble_furniture_crimson_5
+  - first:
+      213: -2685846181350426294
+    second: noble_furniture_crimson_6
+  - first:
+      213: 8100270469984906045
+    second: noble_furniture_crimson_7
+  - first:
+      213: -565127692688014164
+    second: noble_furniture_crimson_8
+  - first:
+      213: 3610084838881059710
+    second: noble_furniture_crimson_9
+  - first:
+      213: 433212264675181473
+    second: noble_furniture_crimson_10
+  - first:
+      213: 3915144934834790533
+    second: noble_furniture_crimson_11
+  - first:
+      213: 7475260613762158814
+    second: noble_furniture_crimson_12
+  - first:
+      213: -326813344820186402
+    second: noble_furniture_crimson_13
+  - first:
+      213: 2315020692772337437
+    second: noble_furniture_crimson_14
+  - first:
+      213: 7578874300502922095
+    second: noble_furniture_crimson_15
+  - first:
+      213: 6357653389961679334
+    second: noble_furniture_crimson_16
+  - first:
+      213: -2538127248973825884
+    second: noble_furniture_crimson_17
+  - first:
+      213: 1350041302713670256
+    second: noble_furniture_crimson_18
+  - first:
+      213: 4806711365152096454
+    second: noble_furniture_crimson_19
+  - first:
+      213: -6812646760928242315
+    second: noble_furniture_crimson_20
+  - first:
+      213: 5618488901052921195
+    second: noble_furniture_crimson_21
+  - first:
+      213: 2940095903460434672
+    second: noble_furniture_crimson_22
+  - first:
+      213: -1348897988672333624
+    second: noble_furniture_crimson_23
+  - first:
+      213: 8692788836632413096
+    second: noble_furniture_crimson_24
+  - first:
+      213: -6936116546773763529
+    second: noble_furniture_crimson_25
+  - first:
+      213: -4492915673749258698
+    second: noble_furniture_crimson_26
+  - first:
+      213: 1065748207123888367
+    second: noble_furniture_crimson_27
+  - first:
+      213: -4650972488878677023
+    second: noble_furniture_crimson_28
+  - first:
+      213: -840532209974523579
+    second: noble_furniture_crimson_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: noble_furniture_crimson_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 255
+        width: 62
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1833a3e99509410800000000000000
+      internalID: 1481782813521052129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 255
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee39a8d2bfc248690800000000000000
+      internalID: -7600900813782084626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 255
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5591f40ae7e7b000800000000000000
+      internalID: 51764913029354845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 255
+        width: 56
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c8126b4ce6ea2d20800000000000000
+      internalID: 3254667583279995078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 255
+        width: 60
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5035cf2a04c4367c0800000000000000
+      internalID: -4079332996971474171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 255
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0844ce937928c0850800000000000000
+      internalID: 6344589561081644160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 191
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49b447d025f9bad0800000000000000
+      internalID: -2685846181350426294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 191
+        width: 62
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b690c4311f96070800000000000000
+      internalID: 8100270469984906045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 191
+        width: 48
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca448909b534828f0800000000000000
+      internalID: -565127692688014164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 191
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73678ea809991230800000000000000
+      internalID: 3610084838881059710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_10
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 191
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a38e4c6244130600800000000000000
+      internalID: 433212264675181473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_11
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 191
+        width: 60
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5806ffc2393655630800000000000000
+      internalID: 3915144934834790533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 127
+        width: 60
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed013ce2ce57db760800000000000000
+      internalID: 7475260613762158814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 127
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed2b2229efce67bf0800000000000000
+      internalID: -326813344820186402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 127
+        width: 62
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17bf58fd0b902020800000000000000
+      internalID: 2315020692772337437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_15
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 127
+        width: 62
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6350de85029d2960800000000000000
+      internalID: 7578874300502922095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_16
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 127
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e159b9e21cea3850800000000000000
+      internalID: 6357653389961679334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 63
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8fc22f6b2c6ccd0800000000000000
+      internalID: -2538127248973825884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_18
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 128
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a9a58796f4cb210800000000000000
+      internalID: 1350041302713670256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 64
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c049b1058ed4b240800000000000000
+      internalID: 4806711365152096454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_20
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 63
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57518aaaddd9471a0800000000000000
+      internalID: -6812646760928242315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_21
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65fbb133e1e8fd40800000000000000
+      internalID: 5618488901052921195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_22
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 63
+        width: 26
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2275b95a15dc820800000000000000
+      internalID: 2940095903460434672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_23
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 63
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c852f21d60c74de0800000000000000
+      internalID: -1348897988672333624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_24
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 63
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3c4faf36df2a870800000000000000
+      internalID: 8692788836632413096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 62
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a37d4ffb6fdbf90800000000000000
+      internalID: -6936116546773763529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_26
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ef36ccff4f5a1c0800000000000000
+      internalID: -4492915673749258698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_27
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 60
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8f0a9095c4ace00800000000000000
+      internalID: 1065748207123888367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_28
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3a54cc92d647fb0800000000000000
+      internalID: -4650972488878677023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noble_furniture_crimson_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549c13a8864d554f0800000000000000
+      internalID: -840532209974523579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      noble_furniture_crimson_0: 1481782813521052129
+      noble_furniture_crimson_1: -7600900813782084626
+      noble_furniture_crimson_10: 433212264675181473
+      noble_furniture_crimson_11: 3915144934834790533
+      noble_furniture_crimson_12: 7475260613762158814
+      noble_furniture_crimson_13: -326813344820186402
+      noble_furniture_crimson_14: 2315020692772337437
+      noble_furniture_crimson_15: 7578874300502922095
+      noble_furniture_crimson_16: 6357653389961679334
+      noble_furniture_crimson_17: -2538127248973825884
+      noble_furniture_crimson_18: 1350041302713670256
+      noble_furniture_crimson_19: 4806711365152096454
+      noble_furniture_crimson_2: 51764913029354845
+      noble_furniture_crimson_20: -6812646760928242315
+      noble_furniture_crimson_21: 5618488901052921195
+      noble_furniture_crimson_22: 2940095903460434672
+      noble_furniture_crimson_23: -1348897988672333624
+      noble_furniture_crimson_24: 8692788836632413096
+      noble_furniture_crimson_25: -6936116546773763529
+      noble_furniture_crimson_26: -4492915673749258698
+      noble_furniture_crimson_27: 1065748207123888367
+      noble_furniture_crimson_28: -4650972488878677023
+      noble_furniture_crimson_29: -840532209974523579
+      noble_furniture_crimson_3: 3254667583279995078
+      noble_furniture_crimson_4: -4079332996971474171
+      noble_furniture_crimson_5: 6344589561081644160
+      noble_furniture_crimson_6: -2685846181350426294
+      noble_furniture_crimson_7: 8100270469984906045
+      noble_furniture_crimson_8: -565127692688014164
+      noble_furniture_crimson_9: 3610084838881059710
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
