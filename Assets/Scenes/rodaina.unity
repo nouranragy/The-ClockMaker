@@ -863,7 +863,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488402628}
-  - component: {fileID: 488402627}
   - component: {fileID: 488402629}
   m_Layer: 0
   m_Name: clock face
@@ -872,23 +871,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &488402627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488402626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8a16b05b10f2c489d6348ef63a4eee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PuzzleClockDOTween
-  chimeAudioSource: {fileID: 488402629}
-  hourHand: {fileID: 1255143730}
-  minuteHand: {fileID: 1255143730}
-  hourAngleOffset: 60
-  minuteAngleOffset: 0
 --- !u!4 &488402628
 Transform:
   m_ObjectHideFlags: 0
@@ -919,10 +901,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b5ff2b00fc451c244a629d8d96a4cbb6, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2077,13 +2059,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255143729}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2692, y: -0.8775, z: 0}
+  m_LocalRotation: {x: 0.019203825, y: 0.035310835, z: -0.47738004, w: 0.87777716}
+  m_LocalPosition: {x: 0.28, y: -0.91, z: 0.023869859}
   m_LocalScale: {x: 0.0912964, y: 0.10512499, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 488402628}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.866, y: 2.508, z: -56.995}
 --- !u!212 &1255143731
 SpriteRenderer:
   serializedVersion: 2
@@ -3428,13 +3410,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971703885}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.312, y: -0.843, z: 0}
+  m_LocalRotation: {x: 0.020984186, y: 0.043989606, z: -0.43003672, w: 0.90149486}
+  m_LocalPosition: {x: 0.3218732, y: -0.9153675, z: 0.041862324}
   m_LocalScale: {x: 0.1320982, y: 0.14994293, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 488402628}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.34, y: 3.523, z: -50.871}
 --- !u!212 &1971703887
 SpriteRenderer:
   serializedVersion: 2
