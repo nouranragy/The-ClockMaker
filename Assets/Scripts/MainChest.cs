@@ -41,11 +41,17 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
     {
         if(audioSource != null && rattleSound != null)
         {
+            audioSource.Stop();
             audioSource.PlayOneShot(rattleSound);
         }
         closedBox.transform.DOComplete();
-        closedBox.transform.DOShakePosition(0.4f, strength: new Vector3(0.15f, 0, 0), vibrato:10, randomness:90);
-
+        closedBox.transform.DOShakePosition(0.4f, strength: new Vector3(0.15f, 0, 0), vibrato:10, randomness:90).OnComplete(()=>
+        {
+          if(audioSource != null && !isUnlocked)
+            {
+                audioSource.Stop();
+            } 
+        });
     }
 
     public void CheckPuzzleCompletion()
@@ -64,7 +70,20 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
    private void UnLockAndOpen()
     {
         isUnlocked = true;
-        closedBox.transform.DOPunchScale(new Vector3(0.2f, -0.2f, 0), 0.15f, 5, 1).OnComplete(() =>
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+
+            if (openSound != null)
+            {
+                AudioSource.PlayClipAtPoint(openSound, Camera.main.transform.position);
+            }
+            else
+            {
+                Debug.LogWarning("openSound clip is missing in Inspector!");
+            }
+        }
+        closedBox.transform.DOPunchScale(new Vector3(0.15f, -0.15f, 0), 0.15f, 5, 1).OnComplete(() =>
         {
             closedBox.SetActive(false);
             openBox.SetActive(true);
