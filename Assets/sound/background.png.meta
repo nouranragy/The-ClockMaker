@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5c2993d0664a5ca40ba6b014a197c4ea
+guid: eab3efe5f516a864f90061f2e18391a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 860288905473623638
-    second: clockHandleCroped_0
+      213: -7443756053782179069
+    second: background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clockHandleCroped_0
+      name: background_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 797
-        height: 893
-      alignment: 9
-      pivot: {x: 0.091598906, y: 0.08620644}
+        width: 121
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65607f6933c50fb00800000000000000
-      internalID: 860288905473623638
+      spriteID: 30356abce4772b890800000000000000
+      internalID: -7443756053782179069
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f89ea3005f6d6034c93cb16ef26c13c5
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      clockHandleCroped_0: 860288905473623638
+      background_0: -7443756053782179069
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
