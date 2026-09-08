@@ -64,4 +64,12 @@ public void DeselctAll()
             slot.SetHighlight(false);
         }
     }
+    public Sprite GetSelectedSprite()
+    {
+        if(currentSelectedSlot != null)
+        {
+            return currentSelectedSlot.iconImage.sprite;
+        }
+        return null;
+    }
 }
