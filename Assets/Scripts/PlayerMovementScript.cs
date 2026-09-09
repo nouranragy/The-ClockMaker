@@ -47,5 +47,6 @@ public class PlayerMovement2D : MonoBehaviour
     {
         targetPosition = new Vector3(destination.x, destination.y, transform.position.z);
         isMoving = true;
+        
     }
 }
