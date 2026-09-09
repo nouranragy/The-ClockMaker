@@ -65,11 +65,21 @@ public void DeselctAll()
         }
     }
     public void ClearCurrentSlot()
-{
-    if (currentSelectedSlot != null)
     {
-        currentSelectedSlot.ClearSlot();
+        if (currentSelectedSlot != null)
+        {
+            currentSelectedSlot.ClearSlot();
+        }
+        DeselctAll();
     }
-    DeselctAll();
-}
+
+    public Sprite GetSelectedSprite()
+    {
+        if (currentSelectedSlot != null)
+        {
+            return currentSelectedSlot.iconImage.sprite;
+        }
+        return null;
+    }
+
 }
