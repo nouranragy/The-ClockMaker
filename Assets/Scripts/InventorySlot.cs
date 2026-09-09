@@ -37,4 +37,5 @@ public class InventorySlot : MonoBehaviour
             highlightOutLine.gameObject.SetActive(active);
         }
     }
+    
 }

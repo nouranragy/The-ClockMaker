@@ -42,6 +42,7 @@ MonoBehaviour:
   - ReceiveMessageRPC
   - RPC_OpenDoor
   - RPC_TriggerLoadingState
+  - RPC_PlaceItem
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

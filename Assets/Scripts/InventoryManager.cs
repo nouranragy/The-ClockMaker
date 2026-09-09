@@ -64,4 +64,12 @@ public void DeselctAll()
             slot.SetHighlight(false);
         }
     }
+    public void ClearCurrentSlot()
+{
+    if (currentSelectedSlot != null)
+    {
+        currentSelectedSlot.ClearSlot();
+    }
+    DeselctAll();
+}
 }
