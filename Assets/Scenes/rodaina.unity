@@ -1844,7 +1844,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 500598245}
-  - {fileID: 687950899}
   - {fileID: 1891135302}
   - {fileID: 163883485}
   m_Father: {fileID: 0}
@@ -2140,11 +2139,11 @@ Transform:
   m_GameObject: {fileID: 687950897}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.77, y: 3.2614, z: 0}
+  m_LocalPosition: {x: 5.46, y: 0.81139994, z: 0}
   m_LocalScale: {x: 6.5623, y: 6.996439, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 664277081}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687950900
 MonoBehaviour:
@@ -3798,6 +3797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b06ad8f838586d4d9d176f2c0910626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WallPuzzleManager
+  wallPuzzleParentContainer: {fileID: 0}
   wallslot1: {fileID: 494768671}
   wallslot2: {fileID: 672876971}
   gearObjects:
@@ -6021,5 +6021,6 @@ SceneRoots:
   - {fileID: 2115533220}
   - {fileID: 488402628}
   - {fileID: 1978944261}
+  - {fileID: 687950899}
   - {fileID: 664277081}
   - {fileID: 1281939907}

@@ -1,0 +1,44 @@
+VICTORIAN MYSTERY BACKGROUNDS - LICENSE
+Version 1.0, August 2026
+
+Copyright (c) 2026 Gergo Nagy, trading as All Hours
+
+GRANT
+By purchasing or downloading this asset pack, you are granted a non-exclusive,
+worldwide, royalty-free license to:
+
+1. Use the images in unlimited personal and commercial projects, including
+   games, visual novels, videos, streams, and printed promotional material
+   for those projects.
+2. Modify, crop, recolor, or otherwise edit the images for use in such
+   projects.
+3. Distribute the images as an embedded, integrated part of a finished
+   project (for example, packaged inside a game's files).
+
+RESTRICTIONS
+You may NOT:
+
+1. Resell, redistribute, sublicense, or share the images as standalone
+   files or as part of another asset pack, whether modified or not.
+2. Use the images to train, fine-tune, or benchmark machine learning models.
+3. Claim authorship of the original images or register them as your own
+   trademarks.
+4. Distribute the images in any form that lets third parties extract and
+   reuse them as assets (for example, an open sprite repository).
+
+DISCLOSURE
+These images were created with generative AI tools (Google Nano Banana 2
+via Google Flow) and were individually curated, quality-checked, and
+retouched by a human. Purchasers who publish on platforms with AI-content
+disclosure rules (Steam, itch.io, and others) are responsible for their own
+project's disclosures.
+
+ATTRIBUTION
+Not required. Appreciated. "Backgrounds: All Hours" is plenty.
+
+NO WARRANTY
+The images are provided "as is", without warranty of any kind. The author is
+not liable for any claim or damages arising from their use.
+
+One license covers one purchaser (individual or single studio team). Buy
+once, use forever, including in future projects.
