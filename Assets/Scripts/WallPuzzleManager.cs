@@ -5,6 +5,10 @@ using ExitGames.Client.Photon;
 public class WallPuzzleManager : MonoBehaviourPunCallbacks
 {
     public static WallPuzzleManager Instance;
+
+    [Header("Whole Wall Puzzle Container")]
+    [Tooltip("WallPuzzle")]
+    public GameObject wallPuzzleParentContainer;
     public WallSlot wallslot1;
     public WallSlot wallslot2;
     public GameObject[] gearObjects;
@@ -17,6 +21,8 @@ public class WallPuzzleManager : MonoBehaviourPunCallbacks
     }
     private void Start()
     {
+        CheckChestUnLockState();
+       
         CheckExistingPuzzleState();
     }
     public void CheckPuzzleCompletion()
@@ -29,9 +35,28 @@ public class WallPuzzleManager : MonoBehaviourPunCallbacks
     }
     public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
     {
+        if (propertiesThatChanged.ContainsKey(MainChest.CHEST_UNLOCKED_KEY))
+        {
+            CheckChestUnLockState();
+        }
+
         if (propertiesThatChanged.ContainsKey(PUZZLE_KEY))
         {
             CheckExistingPuzzleState();
+        }
+    }
+
+    private void CheckChestUnLockState()
+    {
+        bool isChestUnLocked = false;
+
+        if(PhotonNetwork.CurrentRoom != null && PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(MainChest.CHEST_UNLOCKED_KEY, out object isUnlocked))
+        {
+            isChestUnLocked = (bool)isUnlocked;
+        }
+        if(wallPuzzleParentContainer  != null)
+        {
+            wallPuzzleParentContainer.SetActive(isChestUnLocked);
         }
     }
     private void CheckExistingPuzzleState()
