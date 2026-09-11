@@ -25,15 +25,21 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
     [Header ("Animation Settings")]
     public float animDuration = 0.35f;
 
-    public const string CHEST_UNLOCKED_KEY = "MainChestUnLocked";
+   
 
     private bool isUnlocked = false;
+
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
         if(openBox != null)openBox.SetActive(false);
         if(closedBox != null) closedBox.SetActive(true);
+       
+      
     }
+    
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -74,15 +80,7 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
    private void UnLockAndOpen()
     {
         isUnlocked = true;
-
-        if (PhotonNetwork.InRoom)
-        {
-            Hashtable props = new Hashtable{{CHEST_UNLOCKED_KEY , true}};
-            PhotonNetwork.CurrentRoom.SetCustomProperties(props);
-        }
-
-
-        if (audioSource != null)
+      if (audioSource != null)
         {
             audioSource.Stop();
 
@@ -102,5 +100,10 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
             openBox.transform.localScale = Vector3.zero;
             openBox.transform.DOScale(Vector3.one , animDuration).SetEase(Ease.OutBack);
         });
+
+
+        
     }
+
+
 }

@@ -283,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 43920770}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.88, y: 3.29, z: 0}
+  m_LocalPosition: {x: 4.02, y: 3.22, z: 0}
   m_LocalScale: {x: 6.5623, y: 6.996439, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -336,7 +336,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6964550990229429239, guid: c8e547a703a13e147a0365e3f212ed9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4684,7 +4684,7 @@ Transform:
   m_GameObject: {fileID: 1002083843}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.38055, y: -5.94134, z: 0}
+  m_LocalPosition: {x: 3.42, y: -5.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9826,7 +9826,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b06ad8f838586d4d9d176f2c0910626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WallPuzzleManager
-  wallPuzzleParentContainer: {fileID: 1002083843}
   wallslot1: {fileID: 1731698368}
   wallslot2: {fileID: 1551034953}
   gearObjects:
@@ -10632,7 +10631,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1359721154413667153, guid: 31281d8b94d382d4ba8ecc91691da475, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
