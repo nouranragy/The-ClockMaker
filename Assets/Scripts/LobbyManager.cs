@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using TMPro;
 using Photon.Pun;
 using Photon.Realtime;
+using ExitGamesHashtable = ExitGames.Client.Photon.Hashtable;
+
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
     [Header("UI References")]
@@ -11,65 +13,78 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     [SerializeField] private Button PlayButton;
     [SerializeField] private GameObject loadingPanel;
     [SerializeField] private TMP_Text statusText;
-    [Header("Scene Names")]
-    [SerializeField] private string pastSceneName = "past";
-    [SerializeField] private string presentSceneName = "present";
+    private const string GAME_STARTED_PROP = "GameStarted";
+    private bool isStartingGame;
+
     private void Start()
     {
         if (loadingPanel != null) loadingPanel.SetActive(false);
         PhotonNetwork.AutomaticallySyncScene = false;
-        PlayButton.interactable = PhotonNetwork.InRoom;
+        if (NameInputField != null) NameInputField.onValueChanged.AddListener(OnNameInputValueChanged);
+        UpdatePlayButtonState();
         if (!PhotonNetwork.IsConnected)
         {
-            statusText.text = "Connecting to Master Server....";
+            if (statusText != null) statusText.text = "Connecting to Master Server....";
             PhotonNetwork.ConnectUsingSettings();
         }
     }
     public override void OnConnectedToMaster()
     {
-        statusText.text = "Connected. Joining Room...";
-        PhotonNetwork.JoinOrCreateRoom("ClockmakerRoom", new RoomOptions{MaxPlayers = 2}, TypedLobby.Default);
+        if (statusText != null) statusText.text = "Connected. Joining Room...";
+        PhotonNetwork.JoinOrCreateRoom("ClockmakerRoom", new RoomOptions { MaxPlayers = 2 }, TypedLobby.Default);
     }
     public override void OnJoinedRoom()
     {
-        PlayButton.interactable = true;
-        UpdateStatusText();
+        UpdateLocalNickname();
+        UpdateStatusUI();
+        if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(GAME_STARTED_PROP, out object gameStarted) && (bool)gameStarted) StartCoroutine(LoadingSequenceCoroutine());
     }
-    public override void OnPlayerEnteredRoom(Player newPlayer)
+    private void OnNameInputValueChanged(string newName) => UpdateLocalNickname();
+    private void UpdateLocalNickname()
     {
-        UpdateStatusText();
+        string nameToSet = string.IsNullOrWhiteSpace(NameInputField?.text) ? "Player " + PhotonNetwork.LocalPlayer.ActorNumber : NameInputField.text;
+        PhotonNetwork.NickName = nameToSet;
     }
-    public override void OnPlayerLeftRoom(Player otherPlayer)
+    public override void OnPlayerEnteredRoom(Player newPlayer) => UpdateStatusUI();
+    public override void OnPlayerLeftRoom(Player otherPlayer) => UpdateStatusUI();
+    public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGamesHashtable changedProps) => UpdateStatusUI();
+    public override void OnMasterClientSwitched(Player newMasterClient) => UpdateStatusUI();
+
+    private void UpdateStatusUI()
     {
-        UpdateStatusText();
+        if (!PhotonNetwork.InRoom) return;
+        if (statusText != null) statusText.text = $"Players in Lobby: {PhotonNetwork.CurrentRoom.PlayerCount}/2";
+        UpdatePlayButtonState();
     }
-    private void UpdateStatusText()
+    private void UpdatePlayButtonState()
     {
-        int count = PhotonNetwork.CurrentRoom.PlayerCount;
-        statusText.text = $"Players in Lobby: {count}/2";
+        if (PlayButton == null || isStartingGame) return;
+        PlayButton.interactable = PhotonNetwork.InRoom && PhotonNetwork.CurrentRoom.PlayerCount == 2 && PhotonNetwork.IsMasterClient;
     }
     public void OnPlayButtonClicked()
     {
-        string playerName = string.IsNullOrWhiteSpace(NameInputField.text) 
-            ? "Player " + PhotonNetwork.LocalPlayer.ActorNumber 
-            : NameInputField.text;
-        PhotonNetwork.NickName = playerName;
-        photonView.RPC("RPC_TriggerLoadingState", RpcTarget.AllBuffered, PhotonNetwork.LocalPlayer.ActorNumber);
+        if (!PhotonNetwork.IsMasterClient || isStartingGame) return;
+        UpdateLocalNickname();
+        StartCoroutine(LoadingSequenceCoroutine());
+        ExitGamesHashtable props = new ExitGamesHashtable { { GAME_STARTED_PROP, true } };
+        PhotonNetwork.CurrentRoom.SetCustomProperties(props);
     }
-    [PunRPC]
-    private void RPC_TriggerLoadingState(int triggeringPlayerActorNumber)
+    public override void OnRoomPropertiesUpdate(ExitGamesHashtable propertiesThatChanged)
     {
-        StartCoroutine(LoadingSequenceCoroutine(triggeringPlayerActorNumber));
+        if (propertiesThatChanged.ContainsKey(GAME_STARTED_PROP) && (bool)propertiesThatChanged[GAME_STARTED_PROP])
+        {
+            if (!isStartingGame) StartCoroutine(LoadingSequenceCoroutine());
+        }
     }
-    private IEnumerator LoadingSequenceCoroutine(int triggeringPlayerActorNumber)
+    private IEnumerator LoadingSequenceCoroutine()
     {
-        PlayButton.interactable = false;
-        loadingPanel.SetActive(true);
-        if (PhotonNetwork.LocalPlayer.ActorNumber == triggeringPlayerActorNumber)  statusText.text = "Loading game room...";
-        else  statusText.text = $"{PhotonNetwork.CurrentRoom.GetPlayer(triggeringPlayerActorNumber).NickName} started the game!";
+        isStartingGame = true;
+        if (PlayButton != null) PlayButton.interactable = false;
+        if (loadingPanel != null) loadingPanel.SetActive(true);
+        if (statusText != null) statusText.text = "Setting EveryThing...";
         yield return new WaitForSeconds(3.0f);
-        loadingPanel.SetActive(false);
-        if (PhotonNetwork.LocalPlayer.ActorNumber == 1)  PhotonNetwork.LoadLevel(pastSceneName);
-        else  PhotonNetwork.LoadLevel(presentSceneName);
+        if (loadingPanel != null) loadingPanel.SetActive(false);
+        if (PhotonNetwork.IsMasterClient) PhotonNetwork.LoadLevel("past");
+        else PhotonNetwork.LoadLevel("present");
     }
 }
