@@ -25,7 +25,7 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
     [Header ("Animation Settings")]
     public float animDuration = 0.35f;
 
-   
+   public const string CHEST_UNLOCKED_KEY = "MainChestUnlocked";
 
     private bool isUnlocked = false;
 
@@ -80,6 +80,13 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
    private void UnLockAndOpen()
     {
         isUnlocked = true;
+
+        if (PhotonNetwork.InRoom)
+        {
+            Hashtable props = new Hashtable {{ CHEST_UNLOCKED_KEY, true}};
+            PhotonNetwork.CurrentRoom.SetCustomProperties(props);
+            Debug.Log("[MainChest] Chest Opened! Sent signal to reveal Wall Puzzle in Past.");
+        }
       if (audioSource != null)
         {
             audioSource.Stop();
