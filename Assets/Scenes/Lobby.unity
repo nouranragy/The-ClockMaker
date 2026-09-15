@@ -640,7 +640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 59, y: -52}
+  m_AnchoredPosition: {x: 59, y: -48.8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719973558
@@ -2139,8 +2139,11 @@ MonoBehaviour:
   PlayButton: {fileID: 881944736}
   loadingPanel: {fileID: 1392294761}
   statusText: {fileID: 722416286}
-  pastSceneName: past
-  presentSceneName: present
+  loadingDuration: 3
+  roomName: ClockmakerRoom
+  maxPlayers: 2
+  masterSceneName: past
+  clientSceneName: present
 --- !u!4 &1659933759
 Transform:
   m_ObjectHideFlags: 0
@@ -2349,8 +2352,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278853421
+  m_fontColor: {r: 0.1764706, g: 0.121568635, b: 0.039215688, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2367,13 +2370,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
