@@ -19,7 +19,7 @@ MonoBehaviour:
     AppIdVoice: 
     AppVersion: 
     UseNameServer: 1
-    FixedRegion: 
+    FixedRegion: eu
     Server: 
     Port: 0
     ProxyServer: 
@@ -46,6 +46,9 @@ MonoBehaviour:
   - RPC_RequestStartGame
   - RPC_StartPlayer
   - RPC_StartGameSequence
+  - RPC_FinishGame
+  - RPC_Puzzle1Completed
+  - RPC_StartTimer
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0
