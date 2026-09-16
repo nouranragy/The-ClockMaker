@@ -1,18 +1,23 @@
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
 
 [RequireComponent(typeof(PhotonView))]
 public class ScoreManager : MonoBehaviourPunCallbacks
 {
+    [Header("Dependencies")]
     public UIController uiController;
 
-    public float puzzle1TargetTime = 30f;
-    public float puzzle2TargetTime = 45f;
+    [Header("Puzzle Target Times (For 3 Stars)")]
+    public float puzzle1TargetTime = 10f;
+    public float puzzle2TargetTime = 10f;
 
-    private float levelStartTime;
+    private double p1StartTime;
+    private double p2StartTime;
     private float puzzle1TimeSpent;
     private float puzzle2TimeSpent;
+
+    private bool isP1Running = false;
+    private bool isP2Running = false;
 
     private void Start()
     {
@@ -20,63 +25,100 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         {
             uiController.HidePanel();
         }
+    }
 
-        if (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)
-        {
-            photonView.RPC(nameof(RPC_StartTimer), RpcTarget.All, (float)PhotonNetwork.Time);
-        }
+    // --- PUZZLE 1 TRIGGERS ---
+    public void StartPuzzle1()
+    {
+        if (isP1Running) return;
+        photonView.RPC(nameof(RPC_StartPuzzle1), RpcTarget.All, PhotonNetwork.Time);
     }
 
     [PunRPC]
-    private void RPC_StartTimer(float networkStartTime)
+    private void RPC_StartPuzzle1(double startTime)
     {
-        levelStartTime = networkStartTime;
+        p1StartTime = startTime;
+        isP1Running = true;
     }
 
     public void SolvePuzzle1()
     {
-        if (!PhotonNetwork.IsMasterClient) return;
-        float p1Time = (float)(PhotonNetwork.Time - levelStartTime);
-        photonView.RPC(nameof(RPC_Puzzle1Completed), RpcTarget.All, p1Time);
+        if (!isP1Running) return;
+        photonView.RPC(nameof(RPC_SolvePuzzle1), RpcTarget.All, PhotonNetwork.Time);
     }
 
     [PunRPC]
-    private void RPC_Puzzle1Completed(float p1TimeSpent)
+    private void RPC_SolvePuzzle1(double stopTime)
     {
-        puzzle1TimeSpent = p1TimeSpent;
+        isP1Running = false;
+        puzzle1TimeSpent = (float)(stopTime - p1StartTime);
     }
 
-    public void SolvePuzzle2AndOpenDoors()
+    // --- PUZZLE 2 TRIGGERS ---
+    public void StartPuzzle2()
     {
-        if (!PhotonNetwork.IsMasterClient) return;
-        float totalTime = (float)(PhotonNetwork.Time - levelStartTime);
-        float p2Time = totalTime - puzzle1TimeSpent;
-
-        photonView.RPC(nameof(RPC_FinishGame), RpcTarget.All, puzzle1TimeSpent, p2Time);
+        if (isP2Running) return;
+        photonView.RPC(nameof(RPC_StartPuzzle2), RpcTarget.All, PhotonNetwork.Time);
     }
 
     [PunRPC]
-    private void RPC_FinishGame(float p1Time, float p2Time)
+    private void RPC_StartPuzzle2(double startTime)
     {
-        string player1 = PhotonNetwork.PlayerList.Length > 0 ? PhotonNetwork.PlayerList[0].NickName : "Player 1";
-        string player2 = PhotonNetwork.PlayerList.Length > 1 ? PhotonNetwork.PlayerList[1].NickName : "Player 2";
-        string combinedNames = $"{player1}, {player2}";
+        p2StartTime = startTime;
+        isP2Running = true;
+    }
+    public float GetCurrentActiveTime()
+    {
+        if (isP1Running)
+        {
+            return (float)(PhotonNetwork.Time - p1StartTime);
+        }
+        else if (isP2Running)
+        {
+            return (float)(PhotonNetwork.Time - p2StartTime);
+        }
 
-        LevelResult result = new LevelResult()
+        return 0f;
+    }
+
+    public void SolvePuzzle2AndOpenDoor()
+    {
+        if (!isP2Running) return;
+        photonView.RPC(nameof(RPC_SolvePuzzle2AndFinish), RpcTarget.All, PhotonNetwork.Time);
+    }
+
+    [PunRPC]
+    private void RPC_SolvePuzzle2AndFinish(double stopTime)
+    {
+        isP2Running = false;
+        puzzle2TimeSpent = (float)(stopTime - p2StartTime);
+
+        FinishGame();
+    }
+
+    private void FinishGame()
+    {
+        string p1 = PhotonNetwork.PlayerList.Length > 0 ? PhotonNetwork.PlayerList[0].NickName : "Player 1";
+        string p2 = PhotonNetwork.PlayerList.Length > 1 ? PhotonNetwork.PlayerList[1].NickName : "Player 2";
+        if (string.IsNullOrEmpty(p1)) p1 = "Player 1";
+        if (string.IsNullOrEmpty(p2)) p2 = "Player 2";
+
+        string combinedNames = $"{p1}, {p2}";
+
+        LevelResult currentResult = new LevelResult()
         {
             playerNames = combinedNames,
             puzzle1TargetTime = puzzle1TargetTime,
             puzzle2TargetTime = puzzle2TargetTime,
-            puzzle1CompletedTime = p1Time,
-            puzzle2CompletedTime = p2Time
+            puzzle1CompletedTime = puzzle1TimeSpent,
+            puzzle2CompletedTime = puzzle2TimeSpent
         };
-
-        float bestAvg = PlayerPrefs.GetFloat("HighScore_Avg", float.MaxValue);
-        bool isNewBest = result.AverageTime < bestAvg;
+        float previousBestAvg = PlayerPrefs.GetFloat("HighScore_Avg", float.MaxValue);
+        bool isNewBest = currentResult.AverageTime < previousBestAvg;
 
         if (isNewBest)
         {
-            PlayerPrefs.SetFloat("HighScore_Avg", result.AverageTime);
+            PlayerPrefs.SetFloat("HighScore_Avg", currentResult.AverageTime);
             PlayerPrefs.SetString("HighScore_Players", combinedNames);
             PlayerPrefs.Save();
         }
@@ -84,10 +126,10 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         LevelResult globalBest = new LevelResult()
         {
             playerNames = PlayerPrefs.GetString("HighScore_Players", combinedNames),
-            puzzle1CompletedTime = PlayerPrefs.GetFloat("HighScore_Avg", result.AverageTime),
-            puzzle2CompletedTime = PlayerPrefs.GetFloat("HighScore_Avg", result.AverageTime)
+            puzzle1CompletedTime = PlayerPrefs.GetFloat("HighScore_Avg", currentResult.AverageTime) / 2f,
+            puzzle2CompletedTime = PlayerPrefs.GetFloat("HighScore_Avg", currentResult.AverageTime) / 2f
         };
 
-        uiController.DisplayPanel(result, globalBest, isNewBest);
+        if (uiController != null) uiController.DisplayPanel(currentResult, globalBest, isNewBest);
     }
 }

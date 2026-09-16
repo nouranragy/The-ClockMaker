@@ -8,19 +8,24 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
     [Header("Interaction Rules")]
     [Tooltip("Check this ONLY in the scene where clicking the door is allowed. Uncheck in the other scene.")]
     public bool canBeOpenedFromThisScene = true;
+
     [Tooltip("How close the player must be to open the door.")]
     public float interactionDistance = 5f;
+
     [Header("Photon Sync Key")]
     [Tooltip("Unique property key for this door in Photon room properties.")]
     public string doorPropertyKey = "ClockmakerDoorOpened";
     public bool isOpen = false;
+
     private Transform playerTransform;
+
     private void Start()
     {
         PlayerMovement2D player = FindFirstObjectByType<PlayerMovement2D>();
         if (player != null) playerTransform = player.transform;
         SyncDoorStateFromRoom();
     }
+
     public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
     {
         if (propertiesThatChanged.ContainsKey(doorPropertyKey)) SyncDoorStateFromRoom();
@@ -33,6 +38,7 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
             if ((bool)state && !isOpen) DisappearDoor();
         }
     }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (!canBeOpenedFromThisScene)
@@ -42,6 +48,7 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         }
 
         if (isOpen) return;
+
         if (playerTransform != null)
         {
             float distance = Vector2.Distance(playerTransform.position, transform.position);
@@ -51,12 +58,22 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
                 return;
             }
         }
+
+        // --- STOP PUZZLE 2 TIMER & TRIGGER END SCORE PANEL ---
+        ScoreManager scoreManager = Object.FindFirstObjectByType<ScoreManager>();
+        if (scoreManager != null)
+        {
+            scoreManager.SolvePuzzle2AndOpenDoor();
+        }
+
+        // --- UPDATE NETWORK DOOR STATE ---
         Hashtable props = new Hashtable
         {
             { doorPropertyKey, true }
         };
         PhotonNetwork.CurrentRoom.SetCustomProperties(props);
     }
+
     private void DisappearDoor()
     {
         isOpen = true;

@@ -52,6 +52,7 @@ public class WardrobePuzzle : MonoBehaviour , IPointerClickHandler
             passwordInput.gameObject.SetActive(false);
             if(openWardrobeUI != null) openWardrobeUI.SetActive(true);
             if (closedWardrobeObject != null) closedWardrobeObject.SetActive(false);
+            Object.FindFirstObjectByType<ScoreManager>().SolvePuzzle1(); //added
         }
     }
 

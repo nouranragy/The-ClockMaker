@@ -8,21 +8,21 @@ public class UIController : MonoBehaviourPunCallbacks
     public GameObject endPanelContainer;
     public Button exitButton;
 
-    [Header("Top Panel")]
+    [Header("Top Panel (Average Score)")]
     public TMP_Text averageScoreLabel;
     public TMP_Text playerNamesLabel;
     public GameObject newBestIndicator;
-    public GameObject[] averageStars;
+    public Image[] averageStars;
 
     [Header("Puzzle 1 Details")]
     public TMP_Text puzzle1TargetLabel;
     public TMP_Text puzzle1CompletedLabel;
-    public GameObject[] puzzle1Stars;
+    public Image[] puzzle1Stars;
 
     [Header("Puzzle 2 Details")]
     public TMP_Text puzzle2TargetLabel;
     public TMP_Text puzzle2CompletedLabel;
-    public GameObject[] puzzle2Stars;
+    public Image[] puzzle2Stars;
 
     [Header("High Score Panel")]
     public TMP_Text highPlayerNamesLabel;
@@ -40,46 +40,49 @@ public class UIController : MonoBehaviourPunCallbacks
         }
     }
 
-    public void DisplayPanel(LevelResult currentSession, LevelResult globalBest, bool isNewBest)
+    public void DisplayPanel(LevelResult current, LevelResult best, bool isNewBest)
     {
-        endPanelContainer.SetActive(true);
+        if (endPanelContainer != null) endPanelContainer.SetActive(true);
 
-        if (playerNamesLabel != null) playerNamesLabel.text = currentSession.playerNames;
-        if (averageScoreLabel != null) averageScoreLabel.text = $"AVERAGE SCORE ({currentSession.AverageTime:F1}s)";
+        if (playerNamesLabel != null) playerNamesLabel.text = current.playerNames;
+        if (averageScoreLabel != null) averageScoreLabel.text = $"({current.AverageTime:F1}s)";
         if (newBestIndicator != null) newBestIndicator.SetActive(isNewBest);
 
-        SetStars(averageStars, currentSession.AverageStars);
+        SetStars(averageStars, current.AverageStars);
 
-        if (puzzle1CompletedLabel != null) puzzle1CompletedLabel.text = $"COMPLETED IN {currentSession.puzzle1CompletedTime:F1}s";
-        SetStars(puzzle1Stars, currentSession.Puzzle1Stars);
+        // Puzzle 1 UI
+        if (puzzle1TargetLabel != null) puzzle1TargetLabel.text = $"({current.puzzle1TargetTime:F1}s)";
+        if (puzzle1CompletedLabel != null) puzzle1CompletedLabel.text = $"({current.puzzle1CompletedTime:F1}s)";
+        SetStars(puzzle1Stars, current.Puzzle1Stars);
 
-        if (puzzle2CompletedLabel != null) puzzle2CompletedLabel.text = $"COMPLETED IN {currentSession.puzzle2CompletedTime:F1}s";
-        SetStars(puzzle2Stars, currentSession.Puzzle2Stars);
+        // Puzzle 2 UI
+        if (puzzle2TargetLabel != null) puzzle2TargetLabel.text = $"({current.puzzle2TargetTime:F1}s)";
+        if (puzzle2CompletedLabel != null) puzzle2CompletedLabel.text = $"({current.puzzle2CompletedTime:F1}s)";
+        SetStars(puzzle2Stars, current.Puzzle2Stars);
 
-        if (globalBest != null)
+        // Highest Score UI
+        if (best != null)
         {
-            if (highPlayerNamesLabel != null) highPlayerNamesLabel.text = globalBest.playerNames;
-            if (highAverageScoreLabel != null) highAverageScoreLabel.text = $"({globalBest.AverageTime:F1}s)";
+            if (highPlayerNamesLabel != null) highPlayerNamesLabel.text = best.playerNames;
+            if (highAverageScoreLabel != null) highAverageScoreLabel.text = $"({best.AverageTime:F1}s)";
         }
     }
 
-    private void SetStars(GameObject[] starArray, int starsToDisplay)
+    private void SetStars(Image[] starImages, int starCount)
     {
-        if (starArray == null) return;
+        if (starImages == null) return;
 
-        for (int i = 0; i < starArray.Length; i++)
+        for (int i = 0; i < starImages.Length; i++)
         {
-            if (starArray[i] == null) continue;
+            if (starImages[i] == null) continue;
 
-            Image starImage = starArray[i].GetComponent<Image>();
-            if (starImage != null && goldStarSprite != null && emptyStarSprite != null)
+            if (goldStarSprite != null && emptyStarSprite != null)
             {
-                starArray[i].SetActive(true);
-                starImage.sprite = (i < starsToDisplay) ? goldStarSprite : emptyStarSprite;
+                starImages[i].sprite = (i < starCount) ? goldStarSprite : emptyStarSprite;
             }
             else
             {
-                starArray[i].SetActive(i < starsToDisplay);
+                starImages[i].gameObject.SetActive(i < starCount);
             }
         }
     }
@@ -88,16 +91,7 @@ public class UIController : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.InRoom)
         {
-            PhotonNetwork.AutomaticallySyncScene = true;
-
-            if (PhotonNetwork.IsMasterClient)
-            {
-                PhotonNetwork.LoadLevel("exit game");
-            }
-            else
-            {
-                PhotonNetwork.LeaveRoom();
-            }
+            PhotonNetwork.LeaveRoom();
         }
         else
         {

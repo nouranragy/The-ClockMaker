@@ -11,8 +11,11 @@ public class InventoryManager : MonoBehaviour
    [Header ("Current Selection")]
    public string selectedItemID ="";
    private InventorySlot currentSelectedSlot;
+    [Header("Puzzle Item IDs (Inspector Configuration)")]
+    public string puzzle1TriggerItemID = "first candel"; //added
+    public string puzzle2TriggerItemID = "first box"; //added
 
-   private void Awake()
+    private void Awake()
     {
         if(Instance == null ) Instance = this;
         else Destroy(gameObject);
@@ -25,11 +28,29 @@ public class InventoryManager : MonoBehaviour
             if (!slot.isFull)
             {
                 slot.AddItem(itemSprite , itemID);
+                CheckAndStartPuzzleTimer(itemID); // added 
                 return true;
             }
         }
         Debug.Log("Inventory is Full");
         return false;
+    }
+    private void CheckAndStartPuzzleTimer(string itemID) //added
+    {
+        ScoreManager scoreManager = Object.FindFirstObjectByType<ScoreManager>();
+        if (scoreManager == null) return;
+
+        string cleanID = itemID.Trim();
+        if (!string.IsNullOrEmpty(puzzle1TriggerItemID) && cleanID.Equals(puzzle1TriggerItemID.Trim(), System.StringComparison.OrdinalIgnoreCase))
+        {
+            scoreManager.StartPuzzle1();
+            Debug.Log($"[Score System] Puzzle 1 Timer Started via Item: {itemID}");
+        }
+        else if (!string.IsNullOrEmpty(puzzle2TriggerItemID) && cleanID.Equals(puzzle2TriggerItemID.Trim(), System.StringComparison.OrdinalIgnoreCase))
+        {
+            scoreManager.StartPuzzle2();
+            Debug.Log($"[Score System] Puzzle 2 Timer Started via Item: {itemID}");
+        }
     }
 
     public void SelectItem(string itemID , InventorySlot slot)

@@ -10,20 +10,17 @@ public class LevelResult
     public float puzzle1CompletedTime;
     public float puzzle2CompletedTime;
 
-    public float TotalTime => puzzle1CompletedTime + puzzle2CompletedTime;
-    public float AverageTime => TotalTime / 2.0f;
+    public float AverageTime => (puzzle1CompletedTime + puzzle2CompletedTime) / 2.0f;
 
     public int Puzzle1Stars => CalculateStars(puzzle1CompletedTime, puzzle1TargetTime);
     public int Puzzle2Stars => CalculateStars(puzzle2CompletedTime, puzzle2TargetTime);
     public int AverageStars => Mathf.RoundToInt((Puzzle1Stars + Puzzle2Stars) / 2f);
 
-    private int CalculateStars(float completedTime, float targetTime)
+    private int CalculateStars(float completedTime, float target)
     {
-        float third = targetTime / 3.0f;
-        float twoThirds = (targetTime / 3.0f) * 2.0f;
-
-        if (completedTime <= third) return 3;
-        if (completedTime <= twoThirds) return 2;
+        if (target <= 0) return 3;
+        if (completedTime <= target) return 3;
+        if (completedTime <= target * 1.5f) return 2;
         return 1;
     }
 }
