@@ -6,7 +6,7 @@ public class InGameTimerUI : MonoBehaviour
 {
     [Header("UI Reference")]
     public TMP_Text timerText;
-    public string timerPrefix = "Time: ";
+    public string timerPrefix = "";
 
     [Header("Dependencies")]
     public ScoreManager scoreManager;
