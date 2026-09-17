@@ -49,11 +49,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GlowIntensity: 3.4
-    - _PulseSpeed: 12.93
+    - _GlowIntensity: 4.56
+    - _PulseSpeed: 4.61
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0.054170806, g: 0.9019608, b: 0.05098037, a: 1}
+    - _GlowColor: {r: 0.054088064, g: 0.16226411, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3855889916314858028

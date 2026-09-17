@@ -49,8 +49,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GlowIntensity: 12.13
-    - _PulseSpeed: 38.16
+    - _GlowIntensity: 2.1
+    - _PulseSpeed: 9.53
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 0.90188676, g: 0.73439693, b: 0.05275182, a: 1}
