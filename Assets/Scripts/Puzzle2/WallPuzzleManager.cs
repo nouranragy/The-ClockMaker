@@ -13,6 +13,8 @@ public class WallPuzzleManager : MonoBehaviourPunCallbacks
     public GameObject[] gearObjects;
     public GameObject completedClockObject;
     private const string PUZZLE_KEY = "WallPuzzleSolved";
+
+    private bool hasPlayedSolvedSound = false;
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -89,7 +91,20 @@ public class WallPuzzleManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.CurrentRoom != null && PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(PUZZLE_KEY, out object isSolved))
         {
-            if ((bool)isSolved) ApplyPuzzleSolvedVisuals();
+            if ((bool)isSolved)
+            {
+               ApplyPuzzleSolvedVisuals();
+
+                if (!hasPlayedSolvedSound)
+                {
+                    hasPlayedSolvedSound = true;
+                if(SoundManager.Instance != null)
+                {
+                 SoundManager.Instance.PlaySFX(SoundManager.Instance.grandfatherClockSound);
+                }
+                }
+            } 
+             
         }
     }
     private void ApplyPuzzleSolvedVisuals()

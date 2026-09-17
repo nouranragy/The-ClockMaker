@@ -44,7 +44,7 @@ public class WardrobePuzzle : MonoBehaviour , IPointerClickHandler
         {
             paperOriginalScale = paperObject.localScale;
             paperOriginalPos = paperObject.position;
-            paperObject.gameObject.SetActive(false); // إخفائهم لحد ما الدولاب يفتح
+            paperObject.gameObject.SetActive(false); 
         }
 
         if (gearObject != null)
@@ -83,13 +83,18 @@ public class WardrobePuzzle : MonoBehaviour , IPointerClickHandler
             passwordInput.gameObject.SetActive(false);
             // if(openWardrobeUI != null) openWardrobeUI.SetActive(true);
             if (closedWardrobeObject != null) closedWardrobeObject.SetActive(false);
-            Object.FindFirstObjectByType<ScoreManager>().SolvePuzzle1(); //added
+           
             openWardrobeWithTween();
         }
     }
 
     private void openWardrobeWithTween()
     {
+        if(SoundManager.Instance != null)
+        {
+            SoundManager.Instance.StopSFX();
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.chestOpenSound);
+        }
          if(openWardrobeUI != null){
              openWardrobeUI.SetActive(true);
             if(openWardrobeSprite != null)

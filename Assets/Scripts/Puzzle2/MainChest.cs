@@ -15,14 +15,7 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
     [Header ("Box Objects")]
     public GameObject closedBox;
     public GameObject openBox;
-
-    [Header ("Audio & Effects")]
-    public AudioSource audioSource;
-    public AudioClip rattleSound;
-    public AudioClip openSound;
-
-
-    [Header ("Animation Settings")]
+   [Header ("Animation Settings")]
     public float animDuration = 0.35f;
 
    public const string CHEST_UNLOCKED_KEY = "MainChestUnlocked";
@@ -49,17 +42,17 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
 
     private void PlayRattleAnimation()
     {
-        if(audioSource != null && rattleSound != null)
+        if(SoundManager.Instance != null)
         {
-            audioSource.Stop();
-            audioSource.PlayOneShot(rattleSound);
+            SoundManager.Instance.StopSFX();
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.chestRattleSound);
         }
         closedBox.transform.DOComplete();
         closedBox.transform.DOShakePosition(0.4f, strength: new Vector3(0.15f, 0, 0), vibrato:10, randomness:90).OnComplete(()=>
         {
-          if(audioSource != null && !isUnlocked)
+          if(!isUnlocked&& SoundManager.Instance != null )
             {
-                audioSource.Stop();
+                SoundManager.Instance.StopSFX();
             } 
         });
     }
@@ -87,18 +80,10 @@ public class MainChest : MonoBehaviour, IPointerClickHandler
             PhotonNetwork.CurrentRoom.SetCustomProperties(props);
             Debug.Log("[MainChest] Chest Opened! Sent signal to reveal Wall Puzzle in Past.");
         }
-      if (audioSource != null)
+       if(SoundManager.Instance != null)
         {
-            audioSource.Stop();
-
-            if (openSound != null)
-            {
-                AudioSource.PlayClipAtPoint(openSound, Camera.main.transform.position);
-            }
-            else
-            {
-                Debug.LogWarning("openSound clip is missing in Inspector!");
-            }
+            SoundManager.Instance.StopSFX();
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.chestOpenSound);
         }
         closedBox.transform.DOPunchScale(new Vector3(0.15f, -0.15f, 0), 0.15f, 5, 1).OnComplete(() =>
         {
