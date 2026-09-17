@@ -81,10 +81,22 @@ public class WardrobePuzzle : MonoBehaviour , IPointerClickHandler
             isUnlocked = true;
 
             passwordInput.gameObject.SetActive(false);
-            // if(openWardrobeUI != null) openWardrobeUI.SetActive(true);
             if (closedWardrobeObject != null) closedWardrobeObject.SetActive(false);
-           
+
             openWardrobeWithTween();
+            OnPasswordCorrect();
+        }
+    }
+    public void OnPasswordCorrect()
+    {
+
+        if (PuzzleTimerTrigger.Instance != null)
+        {
+            PuzzleTimerTrigger.Instance.OnWardrobePasswordCorrect();
+        }
+        else
+        {
+            Debug.LogWarning("[Timer Trigger] PuzzleTimerTrigger.Instance not found in scene!");
         }
     }
 

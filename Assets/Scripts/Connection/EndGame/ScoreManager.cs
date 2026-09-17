@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Photon.Pun;
 
 [RequireComponent(typeof(PhotonView))]
 public class ScoreManager : MonoBehaviourPunCallbacks
 {
+    public static ScoreManager Instance;
     [Header("Dependencies")]
     public UIController uiController;
     [Header("Puzzle Target Times (For 3 Stars)")]
@@ -15,9 +17,41 @@ public class ScoreManager : MonoBehaviourPunCallbacks
     private float puzzle2TimeSpent;
     private bool isP1Running = false;
     private bool isP2Running = false;
-    private void Start()
+
+    private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this) Destroy(gameObject);
+    }
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    public override void OnDisable()
+    {
+        base.OnDisable();
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        uiController = FindFirstObjectByType<UIController>();
+
         if (uiController != null) uiController.HidePanel();
+        if (scene.name == "Lobby") ResetPuzzleState();
+    }
+    public void ResetPuzzleState()
+    {
+        isP1Running = false;
+        isP2Running = false;
+        p1StartTime = 0;
+        p2StartTime = 0;
+        puzzle1TimeSpent = 0;
+        puzzle2TimeSpent = 0;
     }
     public void StartPuzzle1()
     {

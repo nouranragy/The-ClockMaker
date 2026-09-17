@@ -17,7 +17,7 @@ MonoBehaviour:
     AppIdFusion: 
     AppIdChat: 
     AppIdVoice: 
-    AppVersion: 
+    AppVersion: 1.0
     UseNameServer: 1
     FixedRegion: eu
     Server: 
@@ -53,6 +53,8 @@ MonoBehaviour:
   - RPC_SolvePuzzle2AndFinish
   - RPC_StartPuzzle1
   - RPC_StartPuzzle2
+  - RPC_SwitchScene
+  - RPC_ExecuteSceneSwap
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

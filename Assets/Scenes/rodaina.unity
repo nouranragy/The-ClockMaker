@@ -731,6 +731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIController
   endPanelContainer: {fileID: 334423474}
   exitButton: {fileID: 739187991}
+  inGameMenuObject: {fileID: 0}
   averageScoreLabel: {fileID: 1785354871}
   playerNamesLabel: {fileID: 1898608543}
   newBestIndicator: {fileID: 0}
@@ -5043,7 +5044,7 @@ Transform:
   m_GameObject: {fileID: 1031038750}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -702.24, y: 66.4, z: 0}
+  m_LocalPosition: {x: -702.48, y: 66.4, z: 0}
   m_LocalScale: {x: 0.42900416, y: 0.43732244, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6608,8 +6609,6 @@ MonoBehaviour:
   - {fileID: 1054221227}
   - {fileID: 1251452776}
   selectedItemID: gears
-  puzzle1TriggerItemID: first candel
-  puzzle2TriggerItemID: first box
 --- !u!4 &1385762345
 Transform:
   m_ObjectHideFlags: 0
@@ -9983,6 +9982,7 @@ GameObject:
   - component: {fileID: 2115533219}
   - component: {fileID: 2115533218}
   - component: {fileID: 2115533217}
+  - component: {fileID: 2115533221}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -10078,6 +10078,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &2115533221
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115533216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 596c1ad01369be34187a5a5497ddc8e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
