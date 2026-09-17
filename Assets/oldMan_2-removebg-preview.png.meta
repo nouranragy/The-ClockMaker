@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 6a6cf004cc5332447a1ae79de7698f29
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2075952851996015738
+    second: oldMan_2-removebg-preview_0
+  - first:
+      213: -5713027512558177092
+    second: oldMan_2-removebg-preview_1
+  - first:
+      213: 1342500673594207689
+    second: oldMan_2-removebg-preview_2
+  - first:
+      213: -7763771086536787346
+    second: oldMan_2-removebg-preview_3
+  - first:
+      213: -6400414089458205623
+    second: oldMan_2-removebg-preview_4
+  - first:
+      213: -5068533422657941268
+    second: oldMan_2-removebg-preview_5
+  - first:
+      213: -93723430177585247
+    second: oldMan_2-removebg-preview_6
+  - first:
+      213: 4259833018775195040
+    second: oldMan_2-removebg-preview_7
+  - first:
+      213: -6010209799846097703
+    second: oldMan_2-removebg-preview_8
+  - first:
+      213: 6023558073895316226
+    second: oldMan_2-removebg-preview_9
+  - first:
+      213: 4253064738640293222
+    second: oldMan_2-removebg-preview_10
+  - first:
+      213: 3086416670500396005
+    second: oldMan_2-removebg-preview_11
+  - first:
+      213: -1077054431008066796
+    second: oldMan_2-removebg-preview_12
+  - first:
+      213: 8433459838921706616
+    second: oldMan_2-removebg-preview_13
+  - first:
+      213: 8903098819698979406
+    second: oldMan_2-removebg-preview_14
+  - first:
+      213: -3581248435580001603
+    second: oldMan_2-removebg-preview_15
+  - first:
+      213: 4730983951037829923
+    second: oldMan_2-removebg-preview_16
+  - first:
+      213: -2189825933013861359
+    second: oldMan_2-removebg-preview_17
+  - first:
+      213: 2022816528553333100
+    second: oldMan_2-removebg-preview_18
+  - first:
+      213: 311571718069013881
+    second: oldMan_2-removebg-preview_19
+  - first:
+      213: -3547532941192868522
+    second: oldMan_2-removebg-preview_20
+  - first:
+      213: -1414765777872098183
+    second: oldMan_2-removebg-preview_21
+  - first:
+      213: -7160862272615545738
+    second: oldMan_2-removebg-preview_22
+  - first:
+      213: -6544224694422346890
+    second: oldMan_2-removebg-preview_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 307
+        width: 55
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c7ea9be144fcc10800000000000000
+      internalID: 2075952851996015738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 308
+        width: 55
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4bfe90fbf37b0b0800000000000000
+      internalID: -5713027512558177092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 311
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd2e40ff3581a210800000000000000
+      internalID: 1342500673594207689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 308
+        width: 55
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ab68db45b814490800000000000000
+      internalID: -7763771086536787346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 308
+        width: 54
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c3076eb492d27a0800000000000000
+      internalID: -6400414089458205623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 311
+        width: 52
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce05742d4b3f8a9b0800000000000000
+      internalID: -5068533422657941268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 212
+        width: 48
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7422d690703bef0800000000000000
+      internalID: -93723430177585247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 212
+        width: 53
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad439e9f87fd1b30800000000000000
+      internalID: 4259833018775195040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 212
+        width: 44
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc0a9ec702779ca0800000000000000
+      internalID: -6010209799846097703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 214
+        width: 50
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b677e672af79350800000000000000
+      internalID: 6023558073895316226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 217
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66de46998dbe50b30800000000000000
+      internalID: 4253064738640293222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 212
+        width: 44
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb150afb9725da20800000000000000
+      internalID: 3086416670500396005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 107
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413f00493b88d01f0800000000000000
+      internalID: -1077054431008066796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 108
+        width: 52
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c83768a0ba90570800000000000000
+      internalID: 8433459838921706616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 107
+        width: 44
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e427b54b4392e8b70800000000000000
+      internalID: 8903098819698979406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 110
+        width: 50
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2a4d8a589dc4ec0800000000000000
+      internalID: -3581248435580001603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 113
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3231faf66d4d7a140800000000000000
+      internalID: 4730983951037829923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 107
+        width: 43
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c35c68aec2c91e0800000000000000
+      internalID: -2189825933013861359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 3
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61d5365aec721c10800000000000000
+      internalID: 2022816528553333100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 8
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97dcf89a3dce25400800000000000000
+      internalID: 311571718069013881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 7
+        width: 53
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65dc33be591a4cec0800000000000000
+      internalID: -3547532941192868522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 3
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ced81550ebd5ce0800000000000000
+      internalID: -1414765777872098183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 8
+        width: 54
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6740143f3b18f9c90800000000000000
+      internalID: -7160862272615545738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oldMan_2-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 7
+        width: 52
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673ed9e205e3e25a0800000000000000
+      internalID: -6544224694422346890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      oldMan_2-removebg-preview_0: 2075952851996015738
+      oldMan_2-removebg-preview_1: -5713027512558177092
+      oldMan_2-removebg-preview_10: 4253064738640293222
+      oldMan_2-removebg-preview_11: 3086416670500396005
+      oldMan_2-removebg-preview_12: -1077054431008066796
+      oldMan_2-removebg-preview_13: 8433459838921706616
+      oldMan_2-removebg-preview_14: 8903098819698979406
+      oldMan_2-removebg-preview_15: -3581248435580001603
+      oldMan_2-removebg-preview_16: 4730983951037829923
+      oldMan_2-removebg-preview_17: -2189825933013861359
+      oldMan_2-removebg-preview_18: 2022816528553333100
+      oldMan_2-removebg-preview_19: 311571718069013881
+      oldMan_2-removebg-preview_2: 1342500673594207689
+      oldMan_2-removebg-preview_20: -3547532941192868522
+      oldMan_2-removebg-preview_21: -1414765777872098183
+      oldMan_2-removebg-preview_22: -7160862272615545738
+      oldMan_2-removebg-preview_23: -6544224694422346890
+      oldMan_2-removebg-preview_3: -7763771086536787346
+      oldMan_2-removebg-preview_4: -6400414089458205623
+      oldMan_2-removebg-preview_5: -5068533422657941268
+      oldMan_2-removebg-preview_6: -93723430177585247
+      oldMan_2-removebg-preview_7: 4259833018775195040
+      oldMan_2-removebg-preview_8: -6010209799846097703
+      oldMan_2-removebg-preview_9: 6023558073895316226
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
