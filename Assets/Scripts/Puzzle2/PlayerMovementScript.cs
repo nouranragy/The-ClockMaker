@@ -6,13 +6,20 @@ public class PlayerMovement2D : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float stoppingDistance = 0.1f;
-
+   
+   [Header ("Animation Settings")]
+   public Animator animator;
     private Vector3 targetPosition;
     private bool isMoving = false;
 
     private void Start()
     {
         targetPosition = transform.position;
+
+        if(animator == null)
+        {
+            animator  = GetComponent<Animator>();
+        }
     }
 
     private void Update()
@@ -34,11 +41,23 @@ public class PlayerMovement2D : MonoBehaviour
         // 2. Smoothly move toward target position
         if (isMoving)
         {
+            Vector3 moveDirection = (targetPosition - transform.position).normalized;
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-
+            
+            if(animator != null && moveDirection != Vector3.zero)
+            {
+                animator.SetFloat("MoveX", moveDirection.x);
+                animator.SetFloat("MoveY", moveDirection.y);
+                animator.SetBool("IsMoving", true);
+            }
             if (Vector3.Distance(transform.position, targetPosition) <= stoppingDistance)
             {
                 isMoving = false;
+
+                if (animator != null)
+                {
+                    animator.SetBool("IsMoving", false);
+                }
             }
         }
     }
