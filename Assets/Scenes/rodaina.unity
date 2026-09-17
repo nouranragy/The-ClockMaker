@@ -3450,6 +3450,10 @@ MonoBehaviour:
   interactionDistance: 2.5
   doorPropertyKey: ClockmakerDoorOpened
   isOpen: 0
+  openYRotation: -55
+  openDuration: 0.6
+  openEase: 6
+  doorCollider: {fileID: 0}
 --- !u!1 &701142409
 GameObject:
   m_ObjectHideFlags: 0
@@ -8868,17 +8872,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.29103187, y: 0.47638035}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.99847114, y: -0.0003945042}
     oldSize: {x: 0.53, y: 0.97}
     newSize: {x: 0.53, y: 0.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.53, y: 0.97}
+  m_Size: {x: 0.4717936, y: 0.9832289}
   m_EdgeRadius: 0
 --- !u!212 &1891135301
 SpriteRenderer:
@@ -8948,7 +8952,7 @@ Transform:
   m_GameObject: {fileID: 1891135299}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.35, y: 3.22, z: 0}
+  m_LocalPosition: {x: -5.2, y: 3.22, z: 0}
   m_LocalScale: {x: 6.228142, y: 6.9452853, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8970,6 +8974,10 @@ MonoBehaviour:
   interactionDistance: 5
   doorPropertyKey: ClockmakerDoorOpened
   isOpen: 0
+  openYRotation: -55
+  openDuration: 0.6
+  openEase: 6
+  doorCollider: {fileID: 0}
 --- !u!114 &1891135304
 MonoBehaviour:
   m_ObjectHideFlags: 0

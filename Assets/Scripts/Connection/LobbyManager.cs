@@ -200,7 +200,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         string targetScene = isMasterForGame ? masterSceneName : clientSceneName;
         try
         {
-            PhotonNetwork.LoadLevel(targetScene);
+            if (CurtainTransition.Instance != null)
+                CurtainTransition.Instance.LoadPhotonScene(targetScene);
+            else
+                PhotonNetwork.LoadLevel(targetScene);
         }
         catch (System.Exception ex)
         {

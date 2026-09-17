@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviourPunCallbacks
 {
@@ -28,10 +29,12 @@ public class UIController : MonoBehaviourPunCallbacks
     [Header("Star Sprites")]
     public Sprite goldStarSprite;
     public Sprite emptyStarSprite;
+
     private void Start()
     {
         if (exitButton != null) exitButton.onClick.AddListener(OnExitButtonClicked);
     }
+
     public void DisplayPanel(LevelResult current, LevelResult best, bool isNewBest)
     {
         if (endPanelContainer != null) endPanelContainer.SetActive(true);
@@ -52,6 +55,7 @@ public class UIController : MonoBehaviourPunCallbacks
             if (highAverageScoreLabel != null) highAverageScoreLabel.text = $"({best.AverageTime:F1}s)";
         }
     }
+
     private void SetStars(Image[] starImages, int starCount)
     {
         if (starImages == null) return;
@@ -62,15 +66,26 @@ public class UIController : MonoBehaviourPunCallbacks
             else starImages[i].gameObject.SetActive(i < starCount);
         }
     }
+
     public void OnExitButtonClicked()
     {
         if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
-        else UnityEngine.SceneManagement.SceneManager.LoadScene("exit game");
+        else LoadExitScene();
     }
+
     public override void OnLeftRoom()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("exit game");
+        LoadExitScene();
     }
+
+    private void LoadExitScene()
+    {
+        if (CurtainTransition.Instance != null)
+            CurtainTransition.Instance.LoadScene("exit game");
+        else
+            SceneManager.LoadScene("exit game");
+    }
+
     public void HidePanel()
     {
         if (endPanelContainer != null) endPanelContainer.SetActive(false);

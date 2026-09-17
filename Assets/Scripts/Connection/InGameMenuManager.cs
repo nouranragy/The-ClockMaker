@@ -10,31 +10,66 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
 {
     [Header("UI Panels")]
     [SerializeField] private GameObject settingsPanel;
+
     [Header("Audio Sources")]
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
-    [Header("Audio Button UI Elements")]
-    [SerializeField] private Image muteButtonImage;
-    [SerializeField] private Image musicButtonImage;
-    [SerializeField] private Image sfxButtonImage;
-    [Header("Audio Icon Sprites")]
-    [SerializeField] private Sprite activeSprite;
-    [SerializeField] private Sprite mutedSprite;
+
+    [Header("Audio UI Sliders")]
+    [SerializeField] private Slider musicSlider;
+    [SerializeField] private Slider sfxSlider;
+
     [Header("Scene Names")]
     [SerializeField] private string lobbySceneName = "Lobby";
     [SerializeField] private string masterSceneName = "Past";
     [SerializeField] private string clientSceneName = "Present";
+
     private const string GAME_STARTED = "GameStarted";
-    private bool isMuted = false;
-    private bool isMusicOn = true;
-    private bool isSfxOn = true;
     private bool isLeaving = false;
+
     private void Start()
     {
         isLeaving = false;
         if (settingsPanel) settingsPanel.SetActive(false);
-        UpdateAudioUI();
+
+        // Initialize Sliders to match current AudioSource volumes
+        if (musicSource != null && musicSlider != null)
+        {
+            musicSlider.value = musicSource.volume;
+            musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
+        }
+
+        if (sfxSource != null && sfxSlider != null)
+        {
+            sfxSlider.value = sfxSource.volume;
+            sfxSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
+        }
     }
+
+    private void OnDestroy()
+    {
+        if (musicSlider != null) musicSlider.onValueChanged.RemoveListener(OnMusicVolumeChanged);
+        if (sfxSlider != null) sfxSlider.onValueChanged.RemoveListener(OnSFXVolumeChanged);
+    }
+
+    public void OnMusicVolumeChanged(float value)
+    {
+        if (musicSource != null)
+        {
+            musicSource.volume = value;
+            musicSource.mute = (value <= 0.001f);
+        }
+    }
+
+    public void OnSFXVolumeChanged(float value)
+    {
+        if (sfxSource != null)
+        {
+            sfxSource.volume = value;
+            sfxSource.mute = (value <= 0.001f);
+        }
+    }
+
     public void OnBackToLobbyButtonClicked()
     {
         if (isLeaving) return;
@@ -52,21 +87,31 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
         }
         else LoadLobbyScene();
     }
+
     public override void OnLeftRoom()
     {
         StopAllCoroutines();
         LoadLobbyScene();
     }
+
     private IEnumerator ForceLobbyLoadTimeout(float delay)
     {
         yield return new WaitForSecondsRealtime(delay);
         LoadLobbyScene();
     }
+
     private void LoadLobbyScene()
     {
         isLeaving = false;
-        if (SceneManager.GetActiveScene().name != lobbySceneName) SceneManager.LoadScene(lobbySceneName);
+        if (SceneManager.GetActiveScene().name != lobbySceneName)
+        {
+            if (CurtainTransition.Instance != null)
+                CurtainTransition.Instance.LoadScene(lobbySceneName);
+            else
+                SceneManager.LoadScene(lobbySceneName);
+        }
     }
+
     public void OnSwitchButtonClicked()
     {
         if (!PhotonNetwork.InRoom)
@@ -74,20 +119,28 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
             string currentLocal = SceneManager.GetActiveScene().name;
             string targetLocal = (currentLocal.Equals(masterSceneName, System.StringComparison.OrdinalIgnoreCase))
                 ? clientSceneName : masterSceneName;
-            SceneManager.LoadScene(targetLocal);
+
+            if (CurtainTransition.Instance != null)
+                CurtainTransition.Instance.LoadScene(targetLocal);
+            else
+                SceneManager.LoadScene(targetLocal);
+
             return;
         }
+
         if (photonView == null)
         {
             Debug.LogError($"[{nameof(InGameMenuManager)}] No PhotonView found on this GameObject; cannot send RPC_ExecuteSceneSwap.");
             return;
         }
+
         string senderCurrentScene = SceneManager.GetActiveScene().name;
         bool isSenderInMaster = senderCurrentScene.Equals(masterSceneName, System.StringComparison.OrdinalIgnoreCase);
         string senderTargetScene = isSenderInMaster ? clientSceneName : masterSceneName;
         string otherTargetScene = isSenderInMaster ? masterSceneName : clientSceneName;
         photonView.RPC(nameof(RPC_ExecuteSceneSwap), RpcTarget.All, PhotonNetwork.LocalPlayer.ActorNumber, senderTargetScene, otherTargetScene);
     }
+
     [PunRPC]
     private void RPC_ExecuteSceneSwap(int senderActorNumber, string senderTargetScene, string otherTargetScene)
     {
@@ -95,40 +148,22 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
             ? senderTargetScene
             : otherTargetScene;
 
-        SceneManager.LoadScene(finalTarget);
+        if (CurtainTransition.Instance != null)
+            CurtainTransition.Instance.LoadScene(finalTarget);
+        else
+            SceneManager.LoadScene(finalTarget);
     }
+
     public void OnSettingsButtonClicked()
     {
         if (settingsPanel) settingsPanel.SetActive(true);
     }
+
     public void OnCloseSettingsButtonClicked()
     {
         if (settingsPanel) settingsPanel.SetActive(false);
     }
-    public void OnToggleMuteButtonClicked()
-    {
-        isMuted = !isMuted;
-        AudioListener.pause = isMuted;
-        UpdateAudioUI();
-    }
-    public void OnToggleMusicButtonClicked()
-    {
-        isMusicOn = !isMusicOn;
-        if (musicSource) musicSource.mute = !isMusicOn;
-        UpdateAudioUI();
-    }
-    public void OnToggleSFXButtonClicked()
-    {
-        isSfxOn = !isSfxOn;
-        if (sfxSource) sfxSource.mute = !isSfxOn;
-        UpdateAudioUI();
-    }
-    private void UpdateAudioUI()
-    {
-        if (muteButtonImage && activeSprite && mutedSprite) muteButtonImage.sprite = isMuted ? mutedSprite : activeSprite;
-        if (musicButtonImage && activeSprite && mutedSprite) musicButtonImage.sprite = isMusicOn ? activeSprite : mutedSprite;
-        if (sfxButtonImage && activeSprite && mutedSprite) sfxButtonImage.sprite = isSfxOn ? activeSprite : mutedSprite;
-    }
+
     public void OnQuitButtonClicked()
     {
         if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
