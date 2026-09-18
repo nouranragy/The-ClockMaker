@@ -25,9 +25,15 @@ public class ChestSlotButton : MonoBehaviour
 
   public void OnSlotClicked()
     {
-        if(!string.IsNullOrEmpty(currentPlacedChestID)) return;
+       // if(!string.IsNullOrEmpty(currentPlacedChestID)) return;
 
         string selectedID = InventoryManager.Instance.selectedItemID;
+
+        if (string.IsNullOrEmpty(selectedID) && !string.IsNullOrEmpty(currentPlacedChestID))
+        {
+            ClearSlot();
+            return;
+        }
 
         if (!string.IsNullOrEmpty(selectedID))
         {
@@ -51,8 +57,22 @@ public class ChestSlotButton : MonoBehaviour
         }
     }
 
+    public void ClearSlot()
+    {
+        currentPlacedChestID = "";
+        if (slotDisplayImage != null)
+        {
+            slotDisplayImage.sprite = null;
+            slotDisplayImage.gameObject.SetActive(false);
+        }
+    }
+
     public bool IsCorrectlyPlaced()
     {
-        return currentPlacedChestID.Trim() == requiredChestId.Trim();
+        if (string.IsNullOrEmpty(currentPlacedChestID) || string.IsNullOrEmpty(requiredChestId)) 
+            return false;
+
+        return currentPlacedChestID.Trim().Equals(requiredChestId.Trim(), System.StringComparison.OrdinalIgnoreCase);
+        //return currentPlacedChestID.Trim() == requiredChestId.Trim();
     }
 }

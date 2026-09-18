@@ -2015,7 +2015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8780,7 +8780,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InGameTimerUI
   timerText: {fileID: 599104117}
   timerPrefix: ' '
-  scoreManager: {fileID: 0}
 --- !u!1 &599137878
 GameObject:
   m_ObjectHideFlags: 0
@@ -9801,6 +9800,7 @@ MonoBehaviour:
   openDuration: 0.6
   openEase: 6
   doorCollider: {fileID: 688622091}
+  isPuzzleSolved: 0
 --- !u!61 &688622091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10131,7 +10131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.108}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15.562622, y: -6.484314}
+  m_AnchoredPosition: {x: -15.562744, y: -6.484375}
   m_SizeDelta: {x: -518.2876, y: -239.2914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &711618090
@@ -13318,7 +13318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 35.993103, y: -76.30109}
+  m_AnchoredPosition: {x: 35.993164, y: -76.301025}
   m_SizeDelta: {x: -1112.2302, y: -152.6022}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957151326
@@ -13907,17 +13907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51b3554696f1634b8c889495034f89b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleTimerTrigger
-  scoreManager: {fileID: 0}
-  puzzle1StartItemIDs:
-  - BlueCandle
-  - PinkCandle
-  - BabyBlueCandle
-  - BrownCandle
-  - YellowCandle
-  - GreenCandle
-  puzzle2StartItemIDs:
-  - Chest1
-  - Chest2
+  timerDuration: 300
+  isTimerRunning: 0
+  timeRemaining: 0
 --- !u!1 &1019369285
 GameObject:
   m_ObjectHideFlags: 0
@@ -14913,7 +14905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 28.01178, y: -21.066803}
+  m_AnchoredPosition: {x: 28.011719, y: -21.066772}
   m_SizeDelta: {x: 56.0237, y: 42.1336}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1118676530
@@ -15057,7 +15049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIController
   endPanelContainer: {fileID: 1430167198}
   exitButton: {fileID: 1640875210}
-  inGameMenuObject: {fileID: 0}
+  inGameMenuObject: {fileID: 1118987338}
   averageScoreLabel: {fileID: 2020259325}
   playerNamesLabel: {fileID: 159008812}
   newBestIndicator: {fileID: 0}
@@ -17712,8 +17704,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -391, y: -182}
-  m_SizeDelta: {x: 206.4841, y: 191.0463}
+  m_AnchoredPosition: {x: -432.23, y: -108.9131}
+  m_SizeDelta: {x: 288.94, y: 337.2203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294036725
 MonoBehaviour:
@@ -20955,7 +20947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1551056541
 Transform:
   m_ObjectHideFlags: 0
@@ -21602,7 +21594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1622715587
 Transform:
   m_ObjectHideFlags: 0
@@ -26220,7 +26212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
