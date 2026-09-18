@@ -45,6 +45,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             ConnectToPhoton();
         }
     }
+    
 
     private void OnDestroy()
     {
