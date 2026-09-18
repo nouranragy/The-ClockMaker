@@ -104,8 +104,8 @@ public class ScoreManager : MonoBehaviourPunCallbacks
             puzzle1TimeSpent = (float)(stopTime - p1StartTime);
         }
         isP1Running = false;
-
-        FinishGame();
+        Debug.Log($"[ScoreManager] Puzzle 1 Solved in: {puzzle1TimeSpent} seconds!");
+        // FinishGame();
     }
 
     public void StartPuzzle2()
@@ -130,15 +130,23 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     public void SolvePuzzle2AndOpenDoor()
     {
-        if (!isP2Running) return;
+        // if (!isP2Running) return;
         photonView.RPC(nameof(RPC_SolvePuzzle2AndFinish), RpcTarget.All, PhotonNetwork.Time);
     }
 
     [PunRPC]
     private void RPC_SolvePuzzle2AndFinish(double stopTime)
     {
+        if (isP2Running)
+        {
+            puzzle2TimeSpent = (float)(stopTime - p2StartTime);
+        }
+        else
+        {
+            puzzle2TimeSpent = (float)(stopTime - p1StartTime);
+        }
         isP2Running = false;
-        puzzle2TimeSpent = (float)(stopTime - p2StartTime);
+        
         FinishGame();
     }
 

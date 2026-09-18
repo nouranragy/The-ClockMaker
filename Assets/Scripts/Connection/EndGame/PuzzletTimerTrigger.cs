@@ -1,10 +1,11 @@
 using UnityEngine;
 using Photon.Pun;
 using ExitGames.Client.Photon;
+using System.Collections.Generic;
 
 public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
 {
-    public static PuzzleTimerTrigger Instance { get; private set; }
+   public static PuzzleTimerTrigger Instance { get; private set; }
 
     [Header("Timer Configuration")]
     [Tooltip("Total duration of the timer in seconds.")]
@@ -13,6 +14,9 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
     [Header("State")]
     public bool isTimerRunning = false;
     public float timeRemaining;
+
+    public List<string> Puzzle1itemIds = new List<string>(); 
+    public List<string> Puzzle2itemIds = new List<string>(); 
 
     private const string TIMER_STARTED_KEY = "PuzzleTimerStarted";
     private const string TIMER_START_TIME_KEY = "PuzzleTimerStartTime";
@@ -92,7 +96,21 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
     /// </summary>
     public void OnItemCollected(string itemID)
     {
-        OnItemPickedUp();
+        // OnItemPickedUp();
+        Debug.Log($"[PuzzleTimerTrigger] Item picked up: {itemID}");
+
+        if (Puzzle1itemIds.Contains(itemID))
+        {
+            TriggerTimerStart(1);
+        }
+        else if (Puzzle2itemIds.Contains(itemID))
+        {
+            TriggerTimerStart(2);
+        }
+        else
+        {
+            TriggerTimerStart(1); // افتراضي في حال عدم التحديد
+        }
     }
 
     /// <summary>
@@ -101,7 +119,7 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
     public void OnItemPickedUp()
     {
         Debug.Log("[PuzzleTimerTrigger] Item picked up/collected! Triggering timer start...");
-        TriggerTimerStart();
+        TriggerTimerStart(1);
     }
 
     /// <summary>
@@ -110,10 +128,11 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
     public void OnWardrobePasswordCorrect()
     {
         Debug.Log("[PuzzleTimerTrigger] Wardrobe password correct! Triggering timer start...");
-        TriggerTimerStart();
+        
 
         ScoreManager score = ScoreManager.Instance ?? Object.FindAnyObjectByType<ScoreManager>();
         if (score != null) score.SolvePuzzle1();
+        TriggerTimerStart(2);
     }
 
     /// <summary>
@@ -122,16 +141,17 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
     public void OnDoorOpened()
     {
         Debug.Log("[PuzzleTimerTrigger] Door opened! Triggering timer event...");
-        TriggerTimerStart();
+        // TriggerTimerStart();
+        StopTimer();
     }
 
     #endregion
 
     #region Timer Logic
 
-    public void TriggerTimerStart()
+    public void TriggerTimerStart(int puzzleNumber = 1)
     {
-        if (isTimerRunning) return;
+        // if (isTimerRunning) return;
 
         if (PhotonNetwork.InRoom)
         {
@@ -143,13 +163,25 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
             PhotonNetwork.CurrentRoom.SetCustomProperties(props);
         }
 
-        StartTimerLocal();
+        StartTimerLocal(puzzleNumber);
     }
 
-    private void StartTimerLocal()
+    private void StartTimerLocal(int puzzleNumber)
     {
         isTimerRunning = true;
         Debug.Log("[PuzzleTimerTrigger] Timer started!");
+        ScoreManager score = ScoreManager.Instance ?? Object.FindFirstObjectByType<ScoreManager>();
+    if (score != null)
+    {
+       if (puzzleNumber == 1)
+            {
+                score.StartPuzzle1();
+            }
+            else if (puzzleNumber == 2)
+            {
+                score.StartPuzzle2();
+            }
+    }
     }
 
     /// <summary>

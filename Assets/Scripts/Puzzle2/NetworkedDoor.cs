@@ -103,14 +103,16 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         }
 
         // 2. إرسال إنهاء اللغز لـ ScoreManager من الـ MasterClient أو محلياً للسنقل
-        if (PhotonNetwork.IsMasterClient || !PhotonNetwork.InRoom)
-        {
-            ScoreManager score = ScoreManager.Instance ?? Object.FindFirstObjectByType<ScoreManager>();
-            if (score != null)
-            {
-                score.SolvePuzzle1();
-            }
-        }
+       ScoreManager score = ScoreManager.Instance ?? Object.FindFirstObjectByType<ScoreManager>(FindObjectsInactive.Include);
+    if (score != null)
+    {
+        // score.SolvePuzzle1();
+        score.SolvePuzzle2AndOpenDoor();
+    }
+    else
+    {
+        Debug.LogError("[Door] Could not find ScoreManager in Scene!");
+    }
 
         // 3. أنيميشن الباب
         if (doorCollider != null) doorCollider.enabled = false;

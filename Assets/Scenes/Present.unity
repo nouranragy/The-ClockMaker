@@ -11865,6 +11865,16 @@ MonoBehaviour:
   timerDuration: 300
   isTimerRunning: 0
   timeRemaining: 0
+  Puzzle1itemIds:
+  - BlueCandle
+  - PinkCandle
+  - BabyBlueCandle
+  - GreenCandle
+  - BrowenCandle
+  - YellowCandle
+  Puzzle2itemIds:
+  - Chest1
+  - Chest2
 --- !u!1 &1019369285
 GameObject:
   m_ObjectHideFlags: 0
