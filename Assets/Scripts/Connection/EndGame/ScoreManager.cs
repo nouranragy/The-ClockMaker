@@ -23,6 +23,15 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
+
+        transform.SetParent(null);
+
+    // 2. منع Photon من تدميره عند تحميل السينات
+    if (GetComponent<PhotonView>() != null)
+    {
+        PhotonNetwork.RegisterPhotonView(GetComponent<PhotonView>());
+    }
+    
         if (Instance == null)
         {
             Instance = this;
@@ -45,6 +54,11 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         base.OnDisable();
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
+    private void Start()
+   {
+    Debug.Log($"[ScoreManager] I am alive in scene: {SceneManager.GetActiveScene().name} on GameObject: {gameObject.name}");
+   }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -168,6 +182,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
         if (uiController != null)
         {
+            uiController.gameObject.SetActive(true);
             uiController.DisplayPanel(currentResult, globalBest, isNewBest);
         }
         else
