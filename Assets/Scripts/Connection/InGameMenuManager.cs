@@ -29,21 +29,49 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        // isLeaving = false;
+        // if (settingsPanel) settingsPanel.SetActive(false);
+
+        // // Initialize Sliders to match current AudioSource volumes
+        // if (musicSource != null && musicSlider != null)
+        // {
+        //     musicSlider.value = musicSource.volume;
+        //     musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
+        // }
+
+        // if (sfxSource != null && sfxSlider != null)
+        // {
+        //     sfxSlider.value = sfxSource.volume;
+        //     sfxSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
+        // }
         isLeaving = false;
-        if (settingsPanel) settingsPanel.SetActive(false);
+    if (settingsPanel) settingsPanel.SetActive(false);
 
-        // Initialize Sliders to match current AudioSource volumes
-        if (musicSource != null && musicSlider != null)
-        {
-            musicSlider.value = musicSource.volume;
-            musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
-        }
+    // 1. ربط صوت الباك جراوند (لو محطوط مباشرة على GameObject في السين)
+    if (musicSource == null)
+    {
+        // هيجيب أول AudioSource موجود في المشهد للباك جراوند
+        musicSource = FindFirstObjectByType<AudioSource>();
+    }
 
-        if (sfxSource != null && sfxSlider != null)
-        {
-            sfxSlider.value = sfxSource.volume;
-            sfxSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
-        }
+    // 2. ربط صوت SFX مع SoundManager
+    if (SoundManager.Instance != null && SoundManager.Instance.sfxSource != null) //music
+    {
+        sfxSource = SoundManager.Instance.sfxSource;
+    }
+
+    // 3. ضبط السليدرز
+    if (musicSource != null && musicSlider != null)
+    {
+        musicSlider.value = musicSource.volume;
+        musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
+    }
+
+    if (sfxSource != null && sfxSlider != null)
+    {
+        sfxSlider.value = sfxSource.volume;
+        sfxSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
+    }
     }
 
     private void OnDestroy()
