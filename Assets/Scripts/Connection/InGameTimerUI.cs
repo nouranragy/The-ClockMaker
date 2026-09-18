@@ -1,30 +1,28 @@
 using UnityEngine;
 using TMPro;
-using Photon.Pun;
 
 public class InGameTimerUI : MonoBehaviour
 {
     [Header("UI Reference")]
     public TMP_Text timerText;
     public string timerPrefix = "";
-    [Header("Dependencies")]
-    public ScoreManager scoreManager;
+
     private void Start()
     {
-        if (scoreManager == null) scoreManager = Object.FindFirstObjectByType<ScoreManager>();
-
         if (timerText == null) timerText = GetComponent<TMP_Text>();
     }
+
     private void Update()
     {
-        if (scoreManager == null)
-        {
-            scoreManager = ScoreManager.Instance;
-            if (scoreManager == null) scoreManager = Object.FindFirstObjectByType<ScoreManager>();
-        }
+        if (timerText == null || PuzzleTimerTrigger.Instance == null) return;
 
-        if (scoreManager == null || timerText == null) return;
-        float currentDisplayTime = scoreManager.GetCurrentActiveTime();
-        timerText.text = $"{timerPrefix}{currentDisplayTime:F1}s";
+        // Reads the actual countdown time from PuzzleTimerTrigger
+        float currentDisplayTime = PuzzleTimerTrigger.Instance.timeRemaining;
+
+        // Formats as Minutes:Seconds (e.g., 04:59s)
+        int minutes = Mathf.FloorToInt(currentDisplayTime / 60f);
+        int seconds = Mathf.FloorToInt(currentDisplayTime % 60f);
+
+        timerText.text = $"{timerPrefix}{minutes:00}:{seconds:00}s";
     }
 }
