@@ -5,18 +5,18 @@ using System.Collections.Generic;
 
 public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
 {
-   public static PuzzleTimerTrigger Instance { get; private set; }
+    public static PuzzleTimerTrigger Instance { get; private set; }
 
     [Header("Timer Configuration")]
-    [Tooltip("Total duration of the timer in seconds.")]
+    [Tooltip("Total duration of the timer in seconds for each puzzle.")]
     public float timerDuration = 300f;
 
     [Header("State")]
     public bool isTimerRunning = false;
     public float timeRemaining;
 
-    public List<string> Puzzle1itemIds = new List<string>(); 
-    public List<string> Puzzle2itemIds = new List<string>(); 
+    public List<string> Puzzle1itemIds = new List<string>();
+    public List<string> Puzzle2itemIds = new List<string>();
 
     private const string TIMER_STARTED_KEY = "PuzzleTimerStarted";
     private const string TIMER_START_TIME_KEY = "PuzzleTimerStartTime";
@@ -41,11 +41,19 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
     {
         if (!isTimerRunning) return;
 
-        if (timeRemaining > 0)
+        // Sync remaining time directly using Photon's network time
+        if (PhotonNetwork.InRoom && PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(TIMER_START_TIME_KEY, out object startTimeObj))
+        {
+            double startTime = (double)startTimeObj;
+            double elapsedTime = PhotonNetwork.Time - startTime;
+            timeRemaining = Mathf.Max(0f, timerDuration - (float)elapsedTime);
+        }
+        else
         {
             timeRemaining -= Time.deltaTime;
         }
-        else
+
+        if (timeRemaining <= 0)
         {
             timeRemaining = 0;
             isTimerRunning = false;
@@ -58,45 +66,33 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
         if (propertiesThatChanged.ContainsKey(TIMER_STARTED_KEY))
         {
             bool started = (bool)propertiesThatChanged[TIMER_STARTED_KEY];
-
-            // Sync running state across all network clients
             isTimerRunning = started;
 
             if (started)
             {
-                Debug.Log("[PuzzleTimerTrigger] Timer started across network!");
+                Debug.Log("[PuzzleTimerTrigger] Network timer started!");
             }
             else
             {
-                Debug.Log("[PuzzleTimerTrigger] Timer stopped across network!");
+                Debug.Log("[PuzzleTimerTrigger] Network timer stopped!");
             }
         }
     }
 
     #region Trigger Event Handlers
 
-    /// <summary>
-    /// Overload for calls from PickupItem.cs without parameters.
-    /// </summary>
     public void OnItemCollected()
     {
         OnItemPickedUp();
     }
 
-    /// <summary>
-    /// Overload for calls from PickupItem.cs passing generic objects or IDs.
-    /// </summary>
     public void OnItemCollected(object item)
     {
         OnItemPickedUp();
     }
 
-    /// <summary>
-    /// Overload specifically accepting string arguments (e.g., itemID).
-    /// </summary>
     public void OnItemCollected(string itemID)
     {
-        // OnItemPickedUp();
         Debug.Log($"[PuzzleTimerTrigger] Item picked up: {itemID}");
 
         if (Puzzle1itemIds.Contains(itemID))
@@ -109,39 +105,29 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
         }
         else
         {
-            TriggerTimerStart(1); // افتراضي في حال عدم التحديد
+            TriggerTimerStart(1);
         }
     }
 
-    /// <summary>
-    /// Triggered when an item is picked up in the scene.
-    /// </summary>
     public void OnItemPickedUp()
     {
         Debug.Log("[PuzzleTimerTrigger] Item picked up/collected! Triggering timer start...");
         TriggerTimerStart(1);
     }
 
-    /// <summary>
-    /// Triggered when the wardrobe puzzle password is typed correctly.
-    /// </summary>
     public void OnWardrobePasswordCorrect()
     {
-        Debug.Log("[PuzzleTimerTrigger] Wardrobe password correct! Triggering timer start...");
-        
+        Debug.Log("[PuzzleTimerTrigger] Wardrobe password correct! Stopping Puzzle 1 timer...");
 
-        ScoreManager score = ScoreManager.Instance ?? Object.FindAnyObjectByType<ScoreManager>();
+        ScoreManager score = ScoreManager.Instance ?? Object.FindFirstObjectByType<ScoreManager>();
         if (score != null) score.SolvePuzzle1();
-        TriggerTimerStart(2);
+
+        StopTimer();
     }
 
-    /// <summary>
-    /// Triggered when the networked door is opened.
-    /// </summary>
     public void OnDoorOpened()
     {
-        Debug.Log("[PuzzleTimerTrigger] Door opened! Triggering timer event...");
-        // TriggerTimerStart();
+        Debug.Log("[PuzzleTimerTrigger] Door opened! Stopping Puzzle 2 timer...");
         StopTimer();
     }
 
@@ -151,7 +137,10 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
 
     public void TriggerTimerStart(int puzzleNumber = 1)
     {
-        // if (isTimerRunning) return;
+        // DO NOT restart if the timer is already running for the active puzzle
+        if (isTimerRunning) return;
+
+        timeRemaining = timerDuration;
 
         if (PhotonNetwork.InRoom)
         {
@@ -163,17 +152,12 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
             PhotonNetwork.CurrentRoom.SetCustomProperties(props);
         }
 
-        StartTimerLocal(puzzleNumber);
-    }
-
-    private void StartTimerLocal(int puzzleNumber)
-    {
         isTimerRunning = true;
-        Debug.Log("[PuzzleTimerTrigger] Timer started!");
+
         ScoreManager score = ScoreManager.Instance ?? Object.FindFirstObjectByType<ScoreManager>();
-    if (score != null)
-    {
-       if (puzzleNumber == 1)
+        if (score != null)
+        {
+            if (puzzleNumber == 1)
             {
                 score.StartPuzzle1();
             }
@@ -181,12 +165,9 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
             {
                 score.StartPuzzle2();
             }
-    }
+        }
     }
 
-    /// <summary>
-    /// Stops the timer locally and updates Photon Room properties.
-    /// </summary>
     public void StopTimer()
     {
         isTimerRunning = false;
@@ -199,9 +180,6 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
         }
     }
 
-    /// <summary>
-    /// Overload for scripts calling StopTimer with parameters.
-    /// </summary>
     public void StopTimer(object data)
     {
         StopTimer();
@@ -210,7 +188,6 @@ public class PuzzleTimerTrigger : MonoBehaviourPunCallbacks
     private void OnTimerExpired()
     {
         Debug.LogWarning("[PuzzleTimerTrigger] Time is up!");
-        // Add game over / timeout handling here
     }
 
     #endregion
