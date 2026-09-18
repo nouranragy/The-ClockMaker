@@ -8633,17 +8633,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51b3554696f1634b8c889495034f89b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleTimerTrigger
-  scoreManager: {fileID: 0}
-  puzzle1StartItemIDs:
-  - BlueCandle
-  - PinkCandle
-  - BabyBlueCandle
-  - BrownCandle
-  - YellowCandle
-  - GreenCandle
-  puzzle2StartItemIDs:
-  - Chest1
-  - Chest2
+  timerDuration: 300
+  isTimerRunning: 0
+  timeRemaining: 0
 --- !u!1 &994277991
 GameObject:
   m_ObjectHideFlags: 0
@@ -15295,7 +15287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InGameTimerUI
   timerText: {fileID: 1654881479}
   timerPrefix: ' '
-  scoreManager: {fileID: 0}
 --- !u!1 &1661255928
 GameObject:
   m_ObjectHideFlags: 0
@@ -16654,6 +16645,8 @@ MonoBehaviour:
   openDuration: 0.6
   openEase: 6
   doorCollider: {fileID: 0}
+  uiController: {fileID: 1822988063}
+  isPuzzleSolved: 0
 --- !u!1 &1828451548
 GameObject:
   m_ObjectHideFlags: 0

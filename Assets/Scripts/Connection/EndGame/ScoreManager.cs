@@ -48,7 +48,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        uiController = FindFirstObjectByType<UIController>();
+        uiController = Object.FindFirstObjectByType<UIController>(FindObjectsInactive.Include);
 
         if (uiController != null) uiController.HidePanel();
         if (scene.name == "Lobby") ResetPuzzleState();
@@ -79,15 +79,20 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     public void SolvePuzzle1()
     {
-        if (!isP1Running) return;
         photonView.RPC(nameof(RPC_SolvePuzzle1), RpcTarget.All, PhotonNetwork.Time);
     }
 
     [PunRPC]
     private void RPC_SolvePuzzle1(double stopTime)
     {
+        if (isP1Running)
+        {
+            puzzle1TimeSpent = (float)(stopTime - p1StartTime);
+        }
         isP1Running = false;
-        puzzle1TimeSpent = (float)(stopTime - p1StartTime);
+
+        // Triggers End Game Panel display across network
+        FinishGame();
     }
 
     public void StartPuzzle2()
@@ -102,7 +107,6 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         p2StartTime = startTime;
         isP2Running = true;
     }
-    
 
     public float GetCurrentActiveTime()
     {
@@ -124,6 +128,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         puzzle2TimeSpent = (float)(stopTime - p2StartTime);
         FinishGame();
     }
+    
 
     private void FinishGame()
     {
@@ -158,6 +163,18 @@ public class ScoreManager : MonoBehaviourPunCallbacks
             puzzle2CompletedTime = PlayerPrefs.GetFloat("HighScore_Avg", currentResult.AverageTime) / 2f
         };
 
-        if (uiController != null) uiController.DisplayPanel(currentResult, globalBest, isNewBest);
+        if (uiController == null)
+        {
+            uiController = Object.FindFirstObjectByType<UIController>(FindObjectsInactive.Include);
+        }
+
+        if (uiController != null)
+        {
+            uiController.DisplayPanel(currentResult, globalBest, isNewBest);
+        }
+        else
+        {
+            Debug.LogWarning("[ScoreManager] UIController not found in scene!");
+        }
     }
 }
