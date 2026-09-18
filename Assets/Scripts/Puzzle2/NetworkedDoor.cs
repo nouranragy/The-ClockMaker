@@ -18,16 +18,10 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
     public bool isOpen = false;
 
     [Header("Open Animation")]
-    [Tooltip("Y-axis rotation (degrees) the door swings to when opened.")]
     [SerializeField] private float openYRotation = -55f;
     [SerializeField] private float openDuration = 0.6f;
     [SerializeField] private Ease openEase = Ease.OutQuad;
-    [Tooltip("Optional. Disabled once the door opens so the player can walk through it.")]
     [SerializeField] private Collider2D doorCollider;
-
-    [Header("UI Reference")]
-    [Tooltip("Drag your UIController script or object here directly in the Inspector.")]
-    [SerializeField] private UIController uiController;
 
     private Transform playerTransform;
     private Tween openTween;
@@ -40,11 +34,7 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         if (player != null) playerTransform = player.transform;
         if (doorCollider == null) doorCollider = GetComponent<Collider2D>();
 
-        // Find UIController even if its GameObject is currently disabled
-        if (uiController == null)
-            uiController = Object.FindFirstObjectByType<UIController>(FindObjectsInactive.Include);
-
-        SyncDoorStateFromRoom(notifyTimer: false);
+        SyncDoorStateFromRoom();
     }
 
     private void OnDestroy()
@@ -60,10 +50,10 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
 
     public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
     {
-        if (propertiesThatChanged.ContainsKey(doorPropertyKey)) SyncDoorStateFromRoom(notifyTimer: true);
+        if (propertiesThatChanged.ContainsKey(doorPropertyKey)) SyncDoorStateFromRoom();
     }
 
-    private void SyncDoorStateFromRoom(bool notifyTimer)
+    private void SyncDoorStateFromRoom()
     {
         if (PhotonNetwork.CurrentRoom != null && PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(doorPropertyKey, out object state))
         {
@@ -106,37 +96,23 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         isOpen = true;
         Debug.Log($"[Door] {gameObject.name} opened!");
 
-        // 1. Stop the puzzle timer
+        // 1. إيقاف التايمر باسم الدالة الصحيح
         if (PuzzleTimerTrigger.Instance != null)
         {
             PuzzleTimerTrigger.Instance.StopTimer();
-            Debug.Log("[NetworkedDoor] Stopped PuzzleTimerTrigger.");
         }
 
-        // 2. Notify ScoreManager
-        ScoreManager score = ScoreManager.Instance ?? Object.FindFirstObjectByType<ScoreManager>();
-        if (score != null)
+        // 2. إرسال إنهاء اللغز لـ ScoreManager من الـ MasterClient أو محلياً للسنقل
+        if (PhotonNetwork.IsMasterClient || !PhotonNetwork.InRoom)
         {
-            score.SolvePuzzle1();
-        }
-
-        // 3. Trigger End Game Panel safely
-        if (uiController == null)
-            uiController = Object.FindFirstObjectByType<UIController>(FindObjectsInactive.Include);
-
-        if (uiController != null)
-        {
-            // Activate the UIController GameObject itself if it's inactive
-            if (!uiController.gameObject.activeSelf)
-                uiController.gameObject.SetActive(true);
-
-            // Activate the End Game Panel container
-            if (uiController.endPanelContainer != null)
+            ScoreManager score = ScoreManager.Instance ?? Object.FindFirstObjectByType<ScoreManager>();
+            if (score != null)
             {
-                uiController.endPanelContainer.SetActive(true);
+                score.SolvePuzzle1();
             }
         }
 
+        // 3. أنيميشن الباب
         if (doorCollider != null) doorCollider.enabled = false;
         openTween?.Kill();
         openTween = transform.DOLocalRotate(new Vector3(0f, openYRotation, 0f), openDuration).SetEase(openEase);

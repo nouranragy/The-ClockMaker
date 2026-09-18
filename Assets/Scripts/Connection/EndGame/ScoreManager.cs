@@ -91,7 +91,6 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         }
         isP1Running = false;
 
-        // Triggers End Game Panel display across network
         FinishGame();
     }
 
@@ -128,7 +127,6 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         puzzle2TimeSpent = (float)(stopTime - p2StartTime);
         FinishGame();
     }
-    
 
     private void FinishGame()
     {
@@ -174,7 +172,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            Debug.LogWarning("[ScoreManager] UIController not found in scene!");
+            Debug.LogError("[ScoreManager] UIController reference is missing in scene!");
         }
     }
 }

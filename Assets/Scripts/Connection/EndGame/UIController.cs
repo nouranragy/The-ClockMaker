@@ -43,22 +43,24 @@ public class UIController : MonoBehaviourPunCallbacks
 
     public void DisplayPanel(LevelResult current, LevelResult best, bool isNewBest)
     {
-        Debug.Log("[UIController] DisplayPanel called!");
+        Debug.Log("[UIController] DisplayPanel invoked!");
 
-        // Ensure this GameObject (and its parent Canvas) is active
-        if (!gameObject.activeInHierarchy)
+        // تفعيل الأوبجيكت والوالد (الـ Canvas)
+        gameObject.SetActive(true);
+
+        if (transform.parent != null && !transform.parent.gameObject.activeSelf)
         {
-            gameObject.SetActive(true);
+            transform.parent.gameObject.SetActive(true);
         }
 
         if (endPanelContainer != null)
         {
             endPanelContainer.SetActive(true);
-            Debug.Log("[UIController] endPanelContainer set to ACTIVE.");
         }
         else
         {
-            Debug.LogError("[UIController] endPanelContainer is UNASSIGNED in the Inspector!");
+            Debug.LogError("[UIController] endPanelContainer is null!");
+            return;
         }
 
         if (inGameMenuObject != null) inGameMenuObject.SetActive(false);
@@ -66,7 +68,6 @@ public class UIController : MonoBehaviourPunCallbacks
         if (averageScoreLabel != null) averageScoreLabel.text = $"({current.AverageTime:F1}s)";
         if (newBestIndicator != null) newBestIndicator.SetActive(isNewBest);
 
-        // Safe star assignment
         if (averageStars != null && averageStars.Length > 0)
             SetStars(averageStars, current.AverageStars);
 
