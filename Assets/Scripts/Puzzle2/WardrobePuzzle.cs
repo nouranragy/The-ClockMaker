@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using UnityEngine.SocialPlatforms.Impl;
 
 
 public class WardrobePuzzle : MonoBehaviour , IPointerClickHandler
@@ -89,10 +90,14 @@ public class WardrobePuzzle : MonoBehaviour , IPointerClickHandler
     }
     public void OnPasswordCorrect()
     {
+        ScoreManager score = ScoreManager.Instance ?? Object.FindFirstObjectByType<ScoreManager>();
+        if (score != null) score.SolvePuzzle1();
+        Debug.Log("[WardrobePuzzle] Puzzle 1 completed! Stopping timer...");
 
         if (PuzzleTimerTrigger.Instance != null)
         {
-            PuzzleTimerTrigger.Instance.OnWardrobePasswordCorrect();
+            // Call StopTimer() instead of OnWardrobePasswordCorrect()
+            PuzzleTimerTrigger.Instance.StopTimer();
         }
         else
         {

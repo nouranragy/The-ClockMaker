@@ -6,16 +6,17 @@ using DG.Tweening;
 
 public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
 {
-    [Header("Puzzle Settings")]
     [Header("Interaction Rules")]
     [Tooltip("Check this ONLY in the scene where clicking the door is allowed. Uncheck in the other scene.")]
     public bool canBeOpenedFromThisScene = true;
     [Tooltip("How close the player must be to open the door.")]
     public float interactionDistance = 5f;
+
     [Header("Photon Sync Key")]
     [Tooltip("Unique property key for this door in Photon room properties.")]
     public string doorPropertyKey = "ClockmakerDoorOpened";
     public bool isOpen = false;
+
     [Header("Open Animation")]
     [Tooltip("Y-axis rotation (degrees) the door swings to when opened.")]
     [SerializeField] private float openYRotation = -55f;
@@ -23,9 +24,10 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
     [SerializeField] private Ease openEase = Ease.OutQuad;
     [Tooltip("Optional. Disabled once the door opens so the player can walk through it.")]
     [SerializeField] private Collider2D doorCollider;
+
     private Transform playerTransform;
-    public bool isPuzzleSolved = false;
     private Tween openTween;
+
     private void Start()
     {
         PlayerMovement2D player = FindFirstObjectByType<PlayerMovement2D>();
@@ -33,14 +35,17 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         if (doorCollider == null) doorCollider = GetComponent<Collider2D>();
         SyncDoorStateFromRoom(notifyTimer: false);
     }
+
     private void OnDestroy()
     {
         openTween?.Kill();
     }
+
     public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
     {
         if (propertiesThatChanged.ContainsKey(doorPropertyKey)) SyncDoorStateFromRoom(notifyTimer: true);
     }
+
     private void SyncDoorStateFromRoom(bool notifyTimer)
     {
         if (PhotonNetwork.CurrentRoom != null && PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(doorPropertyKey, out object state))
@@ -52,10 +57,10 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
             }
         }
     }
+
     public void OnPointerClick(PointerEventData eventData)
     {
-        // أضف شرط تحقق من حل اللغز هنا
-        if (!canBeOpenedFromThisScene || isOpen || !isPuzzleSolved) return;
+        if (!canBeOpenedFromThisScene || isOpen) return;
 
         if (playerTransform != null)
         {
@@ -66,6 +71,7 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         Hashtable props = new Hashtable { { doorPropertyKey, true } };
         PhotonNetwork.CurrentRoom.SetCustomProperties(props);
     }
+
     private void OpenDoor()
     {
         isOpen = true;

@@ -9,20 +9,23 @@ public class InGameTimerUI : MonoBehaviour
 
     private void Start()
     {
-        if (timerText == null) timerText = GetComponent<TMP_Text>();
+        if (timerText == null)
+            timerText = GetComponent<TMP_Text>();
     }
 
     private void Update()
     {
         if (timerText == null || PuzzleTimerTrigger.Instance == null) return;
 
-        // Reads the actual countdown time from PuzzleTimerTrigger
-        float currentDisplayTime = PuzzleTimerTrigger.Instance.timeRemaining;
+        // ONLY update the screen text if the trigger timer is actively running
+        if (PuzzleTimerTrigger.Instance.isTimerRunning)
+        {
+            float currentDisplayTime = PuzzleTimerTrigger.Instance.timeRemaining;
 
-        // Formats as Minutes:Seconds (e.g., 04:59s)
-        int minutes = Mathf.FloorToInt(currentDisplayTime / 60f);
-        int seconds = Mathf.FloorToInt(currentDisplayTime % 60f);
+            int minutes = Mathf.FloorToInt(currentDisplayTime / 60f);
+            int seconds = Mathf.FloorToInt(currentDisplayTime % 60f);
 
-        timerText.text = $"{timerPrefix}{minutes:00}:{seconds:00}s";
+            timerText.text = $"{timerPrefix}{minutes:00}:{seconds:00}s";
+        }
     }
 }

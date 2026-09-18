@@ -102,6 +102,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         p2StartTime = startTime;
         isP2Running = true;
     }
+    
 
     public float GetCurrentActiveTime()
     {
