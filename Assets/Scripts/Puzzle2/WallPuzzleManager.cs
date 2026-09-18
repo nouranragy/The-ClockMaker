@@ -95,6 +95,12 @@ public class WallPuzzleManager : MonoBehaviourPunCallbacks
             {
                ApplyPuzzleSolvedVisuals();
 
+               NetworkedDoor door = FindFirstObjectByType<NetworkedDoor>();
+                if (door != null)
+                {
+                    door.SetPuzzleSolved();
+                }
+
                 if (!hasPlayedSolvedSound)
                 {
                     hasPlayedSolvedSound = true;

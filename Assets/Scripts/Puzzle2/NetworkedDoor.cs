@@ -28,6 +28,8 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
     private Transform playerTransform;
     private Tween openTween;
 
+    public bool isPuzzleSolved = false;
+
     private void Start()
     {
         PlayerMovement2D player = FindFirstObjectByType<PlayerMovement2D>();
@@ -41,6 +43,11 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         openTween?.Kill();
     }
 
+    public void SetPuzzleSolved()
+    {
+        isPuzzleSolved = true;
+        Debug.Log("[NetworkedDoor] Puzzle condition met! Door is now unlockable by click.");
+    }
     public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
     {
         if (propertiesThatChanged.ContainsKey(doorPropertyKey)) SyncDoorStateFromRoom(notifyTimer: true);
@@ -60,8 +67,26 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (!canBeOpenedFromThisScene || isOpen) return;
+        bool isPuzzleSolvedInRoom = false;
 
+        if (PhotonNetwork.CurrentRoom != null && PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue("WallPuzzleSolved", out object solved))
+    {
+        isPuzzleSolvedInRoom = (bool)solved;
+    }
+
+    // لو اللغز مش محلول محلياً ولا على الشبكة، يمنع الفتح
+    if (!isPuzzleSolved && !isPuzzleSolvedInRoom)
+    {
+        Debug.Log("[Door] Cannot open yet! Solve the gear puzzle first.");
+        return;
+    }
+        // if (!canBeOpenedFromThisScene || isOpen) return;
+        // if (!isPuzzleSolved || !canBeOpenedFromThisScene || isOpen)
+        // {
+        //     if (!isPuzzleSolved) Debug.Log("[Door] Cannot open yet! Solve the gear puzzle first.");
+        //     return;
+        // }
+        if (!canBeOpenedFromThisScene || isOpen) return;
         if (playerTransform != null)
         {
             float distance = Vector2.Distance(playerTransform.position, transform.position);
