@@ -126,16 +126,26 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
     StopAllCoroutines();
     PhotonNetwork.RemoveRPCs(PhotonNetwork.LocalPlayer);
 
+    StartCoroutine(SafetyLobbyTimeout());
     // 6. مغادرة الغرفة (Photon هينادي OnLeftRoom أوتوماتيكياً)
     PhotonNetwork.LeaveRoom();
     }
+
+    private IEnumerator SafetyLobbyTimeout()
+{
+    yield return new WaitForSecondsRealtime(2f);
+    if (SceneManager.GetActiveScene().name != lobbySceneName)
+    {
+        LoadLobbyScene();
+    }
+}
 
     public override void OnLeftRoom()
     {
         if (UIController.IsExitingGame || SceneManager.GetActiveScene().name == "exit game") 
         return;
 
-        isLeaving = false;
+        
         StopAllCoroutines();
         LoadLobbyScene();
     }
