@@ -36,6 +36,8 @@ public class UIController : MonoBehaviourPunCallbacks
     public Sprite goldStarSprite;
     public Sprite emptyStarSprite;
 
+    public static bool IsExitingGame = false;
+
     private void Start()
     {
         if (exitButton != null) exitButton.onClick.AddListener(OnExitButtonClicked);
@@ -105,17 +107,27 @@ public class UIController : MonoBehaviourPunCallbacks
 
     public void OnExitButtonClicked()
     {
+        IsExitingGame = true;
+
+        PhotonNetwork.AutomaticallySyncScene = false;
+
         if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
-        else LoadExitScene();
+
+        
+       LoadExitScene();
     }
 
     public override void OnLeftRoom()
     {
+        if (IsExitingGame)
+    {
         LoadExitScene();
     }
+    }
 
-    private void LoadExitScene()
+    public void LoadExitScene()
     {
+        // IsExitingGame = false;
         if (CurtainTransition.Instance != null)
             CurtainTransition.Instance.LoadScene("exit game");
         else
@@ -127,4 +139,6 @@ public class UIController : MonoBehaviourPunCallbacks
         if (endPanelContainer != null) endPanelContainer.SetActive(false);
         if (inGameMenuObject != null) inGameMenuObject.SetActive(true);
     }
+
+   
 }

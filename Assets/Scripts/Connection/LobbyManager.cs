@@ -101,8 +101,18 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         UpdateNickname();
         isMasterForGame = PhotonNetwork.IsMasterClient;
+
+
+        if (PhotonNetwork.IsMasterClient)
+    {
+        PhotonNetwork.CurrentRoom.SetCustomProperties(new ExitGamesHashtable { { GAME_STARTED, false } });
+        PhotonNetwork.CurrentRoom.IsOpen = true;
+        PhotonNetwork.CurrentRoom.IsVisible = true;
+    }
+
+    
         UpdateUI();
-        if (PhotonNetwork.CurrentRoom.PlayerCount == maxPlayers && PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(GAME_STARTED, out var v) && v is true) StartGameSequence();
+        // if (PhotonNetwork.CurrentRoom.PlayerCount == maxPlayers && PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(GAME_STARTED, out var v) && v is true) StartGameSequence();
     }
 
     public override void OnPlayerEnteredRoom(Player p) => UpdateUI();
@@ -197,8 +207,15 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             StopLoading();
             yield break;
         }
-
+        bool isMaster = PhotonNetwork.IsMasterClient;
         string targetScene = isMasterForGame ? masterSceneName : clientSceneName;
+
+        ExitGamesHashtable props = new ExitGamesHashtable
+    {
+        { "CurrentScene", targetScene },
+        { "IsMasterRole", isMaster }
+    };
+    PhotonNetwork.LocalPlayer.SetCustomProperties(props);
         try
         {
             if (CurtainTransition.Instance != null)

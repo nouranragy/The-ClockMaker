@@ -100,24 +100,42 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
 
     public void OnBackToLobbyButtonClicked()
     {
-        if (isLeaving) return;
-        isLeaving = true;
-        if (PhotonNetwork.InRoom)
-        {
-            if (PhotonNetwork.IsMasterClient)
-            {
-                PhotonNetwork.CurrentRoom.SetCustomProperties(new ExitGamesHashtable { { GAME_STARTED, false } });
-                PhotonNetwork.CurrentRoom.IsOpen = true;
-                PhotonNetwork.CurrentRoom.IsVisible = true;
-            }
-            PhotonNetwork.LeaveRoom();
-            StartCoroutine(ForceLobbyLoadTimeout(0.5f));
-        }
-        else LoadLobbyScene();
+     // 1. حماية ضد الضغط المتكرر على الزرار
+    if (isLeaving) return;
+    isLeaving = true;
+
+    // 2. ضمان عدم وجود خروج نهائي للعبة
+    UIController.IsExitingGame = false;
+
+    // 3. لو مش جوة غرفة، ارجع للوبي فوراً
+    if (!PhotonNetwork.InRoom)
+    {
+        LoadLobbyScene();
+        return;
+    }
+
+    // 4. لو هو الـ Master Client، أعد فتح الغرفة وتصفير حالة اللعبة
+    if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom != null)
+    {
+        PhotonNetwork.CurrentRoom.SetCustomProperties(new ExitGamesHashtable { { GAME_STARTED, false } });
+        PhotonNetwork.CurrentRoom.IsOpen = true;
+        PhotonNetwork.CurrentRoom.IsVisible = true;
+    }
+
+    // 5. إيقاف أي كوروتاينز وتفريغ الـ RPCs المعلقة للـ LocalPlayer
+    StopAllCoroutines();
+    PhotonNetwork.RemoveRPCs(PhotonNetwork.LocalPlayer);
+
+    // 6. مغادرة الغرفة (Photon هينادي OnLeftRoom أوتوماتيكياً)
+    PhotonNetwork.LeaveRoom();
     }
 
     public override void OnLeftRoom()
     {
+        if (UIController.IsExitingGame || SceneManager.GetActiveScene().name == "exit game") 
+        return;
+
+        isLeaving = false;
         StopAllCoroutines();
         LoadLobbyScene();
     }
@@ -127,6 +145,16 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
         yield return new WaitForSecondsRealtime(delay);
         LoadLobbyScene();
     }
+
+    public override void OnDisconnected(DisconnectCause cause)
+{
+    isLeaving = false;
+    // لو فصل الشبكة وهو بيحاول يخرج للوبي، يحمل السين برضه
+    if (SceneManager.GetActiveScene().name != lobbySceneName)
+    {
+        LoadLobbyScene();
+    }
+}
 
     private void LoadLobbyScene()
     {
@@ -140,47 +168,100 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
         }
     }
 
+    // public void OnSwitchButtonClicked()
+    // {
+    //     if (!PhotonNetwork.InRoom)
+    //     {
+    //         string currentLocal = SceneManager.GetActiveScene().name;
+    //         string targetLocal = (currentLocal.Equals(masterSceneName, System.StringComparison.OrdinalIgnoreCase))
+    //             ? clientSceneName : masterSceneName;
+
+    //         if (CurtainTransition.Instance != null)
+    //             CurtainTransition.Instance.LoadScene(targetLocal);
+    //         else
+    //             SceneManager.LoadScene(targetLocal);
+
+    //         return;
+    //     }
+
+    //     if (photonView == null)
+    //     {
+    //         Debug.LogError($"[{nameof(InGameMenuManager)}] No PhotonView found on this GameObject; cannot send RPC_ExecuteSceneSwap.");
+    //         return;
+    //     }
+
+    //     string senderCurrentScene = SceneManager.GetActiveScene().name;
+    //     bool isSenderInMaster = senderCurrentScene.Equals(masterSceneName, System.StringComparison.OrdinalIgnoreCase);
+    //     string senderTargetScene = isSenderInMaster ? clientSceneName : masterSceneName;
+    //     string otherTargetScene = isSenderInMaster ? masterSceneName : clientSceneName;
+    //     photonView.RPC(nameof(RPC_ExecuteSceneSwap), RpcTarget.All, PhotonNetwork.LocalPlayer.ActorNumber, senderTargetScene, otherTargetScene);
+    // }
+
+    // [PunRPC]
+    // private void RPC_ExecuteSceneSwap(int senderActorNumber, string senderTargetScene, string otherTargetScene)
+    // {
+    //     string finalTarget = (PhotonNetwork.LocalPlayer.ActorNumber == senderActorNumber)
+    //         ? senderTargetScene
+    //         : otherTargetScene;
+
+    //         ExitGamesHashtable customProps = new ExitGamesHashtable
+    //      {
+    //     { "CurrentScene", finalTarget }
+    //     };
+    //      PhotonNetwork.LocalPlayer.SetCustomProperties(customProps);
+
+    //     if (CurtainTransition.Instance != null)
+    //         CurtainTransition.Instance.LoadScene(finalTarget);
+    //     else
+    //         SceneManager.LoadScene(finalTarget);
+    // }
+
     public void OnSwitchButtonClicked()
+{
+    if (!PhotonNetwork.InRoom)
     {
-        if (!PhotonNetwork.InRoom)
-        {
-            string currentLocal = SceneManager.GetActiveScene().name;
-            string targetLocal = (currentLocal.Equals(masterSceneName, System.StringComparison.OrdinalIgnoreCase))
-                ? clientSceneName : masterSceneName;
-
-            if (CurtainTransition.Instance != null)
-                CurtainTransition.Instance.LoadScene(targetLocal);
-            else
-                SceneManager.LoadScene(targetLocal);
-
-            return;
-        }
-
-        if (photonView == null)
-        {
-            Debug.LogError($"[{nameof(InGameMenuManager)}] No PhotonView found on this GameObject; cannot send RPC_ExecuteSceneSwap.");
-            return;
-        }
-
-        string senderCurrentScene = SceneManager.GetActiveScene().name;
-        bool isSenderInMaster = senderCurrentScene.Equals(masterSceneName, System.StringComparison.OrdinalIgnoreCase);
-        string senderTargetScene = isSenderInMaster ? clientSceneName : masterSceneName;
-        string otherTargetScene = isSenderInMaster ? masterSceneName : clientSceneName;
-        photonView.RPC(nameof(RPC_ExecuteSceneSwap), RpcTarget.All, PhotonNetwork.LocalPlayer.ActorNumber, senderTargetScene, otherTargetScene);
+        SwapLocalScene();
+        return;
     }
 
-    [PunRPC]
-    private void RPC_ExecuteSceneSwap(int senderActorNumber, string senderTargetScene, string otherTargetScene)
+    if (photonView == null)
     {
-        string finalTarget = (PhotonNetwork.LocalPlayer.ActorNumber == senderActorNumber)
-            ? senderTargetScene
-            : otherTargetScene;
-
-        if (CurtainTransition.Instance != null)
-            CurtainTransition.Instance.LoadScene(finalTarget);
-        else
-            SceneManager.LoadScene(finalTarget);
+        Debug.LogError($"[{nameof(InGameMenuManager)}] No PhotonView found on this GameObject; cannot send RPC_ExecuteSceneSwap.");
+        return;
     }
+
+    // إرسال أمر التبديل لجميع اللاعبين في الغرفة
+    photonView.RPC(nameof(RPC_ExecuteSceneSwap), RpcTarget.All);
+}
+
+[PunRPC]
+private void RPC_ExecuteSceneSwap()
+{
+    SwapLocalScene();
+}
+
+private void SwapLocalScene()
+{
+    string currentScene = SceneManager.GetActiveScene().name;
+    
+    // إذا كان اللاعب في Past يذهب إلى Present، والعكس
+    string targetScene = currentScene.Equals(masterSceneName, System.StringComparison.OrdinalIgnoreCase) 
+        ? clientSceneName 
+        : masterSceneName;
+
+    // حفظ المشهد الجديد في خواص اللاعب لتزامن الفوتون
+    ExitGamesHashtable customProps = new ExitGamesHashtable
+    {
+        { "CurrentScene", targetScene }
+    };
+    PhotonNetwork.LocalPlayer.SetCustomProperties(customProps);
+
+    // تحميل السين
+    if (CurtainTransition.Instance != null)
+        CurtainTransition.Instance.LoadScene(targetScene);
+    else
+        SceneManager.LoadScene(targetScene);
+}
 
     public void OnSettingsButtonClicked()
     {

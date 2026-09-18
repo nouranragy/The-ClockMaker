@@ -7072,6 +7072,8 @@ MonoBehaviour:
   timerDuration: 300
   isTimerRunning: 0
   timeRemaining: 0
+  Puzzle1itemIds: []
+  Puzzle2itemIds: []
 --- !u!1 &1002083843
 GameObject:
   m_ObjectHideFlags: 0
