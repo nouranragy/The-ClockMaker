@@ -87,6 +87,13 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         SetStatus("Joining room...");
+
+        if (PhotonNetwork.InRoom)
+    {
+        PhotonNetwork.LeaveRoom();
+        return;
+    }
+    
         var opts = new RoomOptions
         {
             MaxPlayers = maxPlayers,
