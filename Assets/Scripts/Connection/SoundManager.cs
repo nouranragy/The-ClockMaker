@@ -6,8 +6,8 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance {get ; private set;}
 
     [Header ("Audio Sources")]
-    [SerializeField] private AudioSource sfxSource;
-    [SerializeField] private AudioSource bgmSource;
+    public AudioSource sfxSource;
+    public  AudioSource bgmSource;
 
     [Header ("Audio Clips")]
     public AudioClip chestRattleSound;
