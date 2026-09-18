@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
 {
+    [Header("Puzzle Settings")]
     [Header("Interaction Rules")]
     [Tooltip("Check this ONLY in the scene where clicking the door is allowed. Uncheck in the other scene.")]
     public bool canBeOpenedFromThisScene = true;
@@ -23,6 +24,7 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
     [Tooltip("Optional. Disabled once the door opens so the player can walk through it.")]
     [SerializeField] private Collider2D doorCollider;
     private Transform playerTransform;
+    public bool isPuzzleSolved = false;
     private Tween openTween;
     private void Start()
     {
@@ -52,12 +54,15 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (!canBeOpenedFromThisScene || isOpen) return;
+        // أضف شرط تحقق من حل اللغز هنا
+        if (!canBeOpenedFromThisScene || isOpen || !isPuzzleSolved) return;
+
         if (playerTransform != null)
         {
             float distance = Vector2.Distance(playerTransform.position, transform.position);
             if (distance > interactionDistance) return;
         }
+
         Hashtable props = new Hashtable { { doorPropertyKey, true } };
         PhotonNetwork.CurrentRoom.SetCustomProperties(props);
     }

@@ -17,6 +17,12 @@ public class InGameTimerUI : MonoBehaviour
     }
     private void Update()
     {
+        if (scoreManager == null)
+        {
+            scoreManager = ScoreManager.Instance;
+            if (scoreManager == null) scoreManager = Object.FindFirstObjectByType<ScoreManager>();
+        }
+
         if (scoreManager == null || timerText == null) return;
         float currentDisplayTime = scoreManager.GetCurrentActiveTime();
         timerText.text = $"{timerPrefix}{currentDisplayTime:F1}s";

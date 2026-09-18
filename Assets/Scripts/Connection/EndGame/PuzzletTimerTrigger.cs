@@ -28,15 +28,19 @@ public class PuzzleTimerTrigger : MonoBehaviour
     }
     public void OnItemCollected(string itemID)
     {
+        if (scoreManager == null) scoreManager = Object.FindFirstObjectByType<ScoreManager>();
         if (scoreManager == null || string.IsNullOrEmpty(itemID)) return;
 
         string cleanID = itemID.Trim();
+
+        // بدء التايمر الأول عند جمع أول شمعة
         if (!isP1TimerStarted && ContainsID(puzzle1StartItemIDs, cleanID))
         {
             isP1TimerStarted = true;
             scoreManager.StartPuzzle1();
             Debug.Log($"[Timer Trigger] Puzzle 1 Timer Started by collecting: '{itemID}'");
         }
+        // بدء التايمر الثاني عند جمع أي بوكس من القائمة
         else if (!isP2TimerStarted && ContainsID(puzzle2StartItemIDs, cleanID))
         {
             isP2TimerStarted = true;
@@ -46,10 +50,15 @@ public class PuzzleTimerTrigger : MonoBehaviour
     }
     public void OnWardrobePasswordCorrect()
     {
-        if (scoreManager == null) return;
-        scoreManager.SolvePuzzle1();
-        Debug.Log("[Timer Trigger] Puzzle 1 Timer Stopped (Wardrobe Unlocked).");
+        if (scoreManager == null) scoreManager = Object.FindFirstObjectByType<ScoreManager>();
+
+        if (scoreManager != null)
+        {
+            scoreManager.SolvePuzzle1();
+            Debug.Log("[Timer Trigger] Puzzle 1 Timer Stopped (Wardrobe Unlocked).");
+        }
     }
+
     public void OnDoorOpened()
     {
         if (scoreManager == null) return;
