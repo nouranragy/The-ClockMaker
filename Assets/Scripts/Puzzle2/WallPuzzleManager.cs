@@ -1,7 +1,7 @@
 using UnityEngine;
 using Photon.Pun;
 using ExitGames.Client.Photon;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class WallPuzzleManager : MonoBehaviourPunCallbacks
 {
