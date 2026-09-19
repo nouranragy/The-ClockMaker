@@ -33,17 +33,25 @@ public class InGameMenuManager : MonoBehaviourPunCallbacks
     if (settingsPanel) settingsPanel.SetActive(false);
 
     
-    if (musicSource == null)
+    if (SoundManager.Instance != null)
     {
-       
-        musicSource = FindFirstObjectByType<AudioSource>();
+        if (SoundManager.Instance.bgmSource != null)
+            musicSource = SoundManager.Instance.bgmSource;
+
+        if (SoundManager.Instance.sfxSource != null)
+            sfxSource = SoundManager.Instance.sfxSource;
     }
+    // if (musicSource == null)
+    // {
+       
+    //     musicSource = FindFirstObjectByType<AudioSource>();
+    // }
 
    
-    if (SoundManager.Instance != null && SoundManager.Instance.sfxSource != null) //music
-    {
-        sfxSource = SoundManager.Instance.sfxSource;
-    }
+    // if (SoundManager.Instance != null && SoundManager.Instance.sfxSource != null) //music
+    // {
+    //     sfxSource = SoundManager.Instance.sfxSource;
+    // }
 
     if (musicSource != null && musicSlider != null)
     {

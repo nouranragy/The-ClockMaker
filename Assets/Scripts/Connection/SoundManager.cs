@@ -15,6 +15,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip itemPickupSound;
     public AudioClip grandfatherClockSound;
 
+    public AudioClip backgroundMusic;
+
     private void Awake()
     {
         if(Instance == null)
@@ -27,7 +29,16 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    private void Start()
+    {
+        
+        if (bgmSource != null && backgroundMusic != null && !bgmSource.isPlaying)
+        {
+            bgmSource.clip = backgroundMusic;
+            bgmSource.loop = true;
+            bgmSource.Play();
+        }
+    }
     public void PlaySFX(AudioClip clip, float volume = 1f)
     {
         if(clip != null && sfxSource != null)
