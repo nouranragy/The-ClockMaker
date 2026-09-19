@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 using Photon.Pun;
 using ExitGames.Client.Photon;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
 {
@@ -22,6 +23,7 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
     [SerializeField] private float openDuration = 0.6f;
     [SerializeField] private Ease openEase = Ease.OutQuad;
     [SerializeField] private Collider2D doorCollider;
+    public GameObject exit;
 
     private Transform playerTransform;
     private Tween openTween;
@@ -118,6 +120,8 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         if (doorCollider != null) doorCollider.enabled = false;
         openTween?.Kill();
         openTween = transform.DOLocalRotate(new Vector3(0f, openYRotation, 0f), openDuration).SetEase(openEase);
+        exit.SetActive(true);
+
     }
     public void CompletePuzzle()
     {
@@ -135,5 +139,17 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         {
             Debug.LogError("[Door] ScoreManager is still missing in the scene!");
         }
+        if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
+
+    }
+    public void OnQuitButtonClicked()
+    {
+        if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
