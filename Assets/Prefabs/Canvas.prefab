@@ -272,10 +272,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CurtainTransition
   leftCurtain: {fileID: 5637184544003710491}
   rightCurtain: {fileID: 7579170845643620171}
-  leftOpenPosition: {x: -575.2, y: -0.000015259}
-  rightOpenPosition: {x: 626, y: -0.000015259}
-  leftClosedPosition: {x: -186, y: -0.000015259}
-  rightClosedPosition: {x: 217, y: -0.000015259}
+  leftOpenPosition: {x: -1451, y: -0.10651}
+  rightOpenPosition: {x: 1487, y: -0.10651}
+  leftClosedPosition: {x: -437, y: -0.10651}
+  rightClosedPosition: {x: 582, y: -0.10651}
   duration: 1
   easeType: 7
 --- !u!1 &3972501121165641695
@@ -312,8 +312,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -9.307, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 626, y: -0.000015259}
-  m_SizeDelta: {x: 415.48, y: 450}
+  m_AnchoredPosition: {x: 582, y: -0.10651}
+  m_SizeDelta: {x: 1021.4, y: 1078.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7228057814381645472
 CanvasRenderer:
@@ -660,8 +660,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -575.2, y: -0.000015259}
-  m_SizeDelta: {x: 390.3964, y: 450}
+  m_AnchoredPosition: {x: -437, y: -0.11292}
+  m_SizeDelta: {x: 1021.4, y: 1078.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5825849921932776840
 CanvasRenderer:
