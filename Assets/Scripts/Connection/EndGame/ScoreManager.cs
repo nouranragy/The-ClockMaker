@@ -23,12 +23,8 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
+        // Detach from parent so DontDestroyOnLoad works properly
         transform.SetParent(null);
-
-        if (GetComponent<PhotonView>() != null)
-        {
-            PhotonNetwork.RegisterPhotonView(GetComponent<PhotonView>());
-        }
 
         if (Instance == null)
         {
@@ -37,8 +33,14 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         }
         else if (Instance != this)
         {
+            // Duplicate instance found when reloading scene - destroy duplicate
             Destroy(gameObject);
             return;
+        }
+
+        if (GetComponent<PhotonView>() != null)
+        {
+            PhotonNetwork.RegisterPhotonView(GetComponent<PhotonView>());
         }
     }
 

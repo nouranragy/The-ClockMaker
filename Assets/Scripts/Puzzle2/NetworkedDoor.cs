@@ -119,4 +119,21 @@ public class NetworkedDoor : MonoBehaviourPunCallbacks, IPointerClickHandler
         openTween?.Kill();
         openTween = transform.DOLocalRotate(new Vector3(0f, openYRotation, 0f), openDuration).SetEase(openEase);
     }
+    public void CompletePuzzle()
+    {
+        ScoreManager sm = ScoreManager.Instance;
+        if (sm == null)
+        {
+            sm = Object.FindFirstObjectByType<ScoreManager>();
+        }
+
+        if (sm != null)
+        {
+            sm.SolvePuzzle2AndOpenDoor();
+        }
+        else
+        {
+            Debug.LogError("[Door] ScoreManager is still missing in the scene!");
+        }
+    }
 }
