@@ -23,20 +23,19 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
-        // Detach from parent so DontDestroyOnLoad works properly
+        // Detach from parent so DontDestroyOnLoad works
         transform.SetParent(null);
 
-        if (Instance == null)
+        // Singleton check: If an instance already exists, destroy this duplicate IMMEDIATELY
+        if (Instance != null && Instance != this)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Instance != this)
-        {
-            // Duplicate instance found when reloading scene - destroy duplicate
+            Debug.Log("[ScoreManager] Duplicate ScoreManager detected on scene load. Destroying duplicate.");
             Destroy(gameObject);
-            return;
+            return; // Exit early so PhotonView registration doesn't run on the duplicate!
         }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
 
         if (GetComponent<PhotonView>() != null)
         {
@@ -93,6 +92,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         p2StartTime = 0;
         puzzle1TimeSpent = 0;
         puzzle2TimeSpent = 0;
+        Debug.Log("[ScoreManager] State successfully reset for next play session.");
     }
 
     // --- PUZZLE 1 ---
