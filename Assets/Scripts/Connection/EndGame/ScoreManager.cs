@@ -38,6 +38,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         else if (Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
     }
 
@@ -55,10 +56,31 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // Re-bind the UIController every time any scene loads
+        FindAndAssignUIController();
+
+        if (uiController != null)
+        {
+            uiController.HidePanel();
+        }
+
+        // Reset timer states when returning to Lobby or gameplay room
+        ResetPuzzleState();
+    }
+
+    private void FindAndAssignUIController()
+    {
+        // Always search for the active scene's UIController
         uiController = Object.FindFirstObjectByType<UIController>(FindObjectsInactive.Include);
 
-        if (uiController != null) uiController.HidePanel();
-        if (scene.name == "Lobby") ResetPuzzleState();
+        if (uiController != null)
+        {
+            Debug.Log("[ScoreManager] UIController successfully found and assigned!");
+        }
+        else
+        {
+            Debug.LogWarning("[ScoreManager] Could not find UIController in this scene.");
+        }
     }
 
     public void ResetPuzzleState()
@@ -126,14 +148,12 @@ public class ScoreManager : MonoBehaviourPunCallbacks
     [PunRPC]
     private void RPC_SolvePuzzle2AndFinish(double stopTime)
     {
-        // Strictly calculate Puzzle 2 independently from p2StartTime
         if (isP2Running && p2StartTime > 0)
         {
             puzzle2TimeSpent = (float)(stopTime - p2StartTime);
         }
         else
         {
-            // Safeguard: If StartPuzzle2 was never triggered, measure time spent on Puzzle 2
             puzzle2TimeSpent = (float)(stopTime - (p1StartTime + puzzle1TimeSpent));
         }
 
@@ -185,9 +205,10 @@ public class ScoreManager : MonoBehaviourPunCallbacks
             puzzle2TargetTime = puzzle2TargetTime
         };
 
+        // Safety fallback: Ensure we re-locate the UIController before displaying
         if (uiController == null)
         {
-            uiController = Object.FindFirstObjectByType<UIController>(FindObjectsInactive.Include);
+            FindAndAssignUIController();
         }
 
         if (uiController != null)
@@ -197,7 +218,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            Debug.LogError("[ScoreManager] UIController reference is missing in scene!");
+            Debug.LogError("[ScoreManager] UIController reference is missing in scene! Cannot show end panel.");
         }
     }
 }

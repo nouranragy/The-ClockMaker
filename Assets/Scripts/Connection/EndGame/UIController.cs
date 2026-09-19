@@ -40,6 +40,7 @@ public class UIController : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        IsExitingGame = false;
         if (exitButton != null) exitButton.onClick.AddListener(OnExitButtonClicked);
     }
 
