@@ -71,7 +71,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     private void FindAndAssignUIController()
     {
-        // Always search for the active scene's UIController
+        // Search including inactive game objects
         uiController = Object.FindFirstObjectByType<UIController>(FindObjectsInactive.Include);
 
         if (uiController != null)
@@ -80,7 +80,12 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            Debug.LogWarning("[ScoreManager] Could not find UIController in this scene.");
+            // Only log a warning if we are in the gameplay scene, not the Lobby/Exit scenes
+            string currentScene = SceneManager.GetActiveScene().name;
+            if (currentScene != "Lobby" && currentScene != "exit game")
+            {
+                Debug.LogWarning($"[ScoreManager] Could not find UIController in scene: {currentScene}");
+            }
         }
     }
 
@@ -174,6 +179,11 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     private void FinishGame()
     {
+        if (uiController == null)
+        {
+            FindAndAssignUIController();
+        }
+
         string p1 = PhotonNetwork.PlayerList.Length > 0 ? PhotonNetwork.PlayerList[0].NickName : "Player 1";
         string p2 = PhotonNetwork.PlayerList.Length > 1 ? PhotonNetwork.PlayerList[1].NickName : "Player 2";
         if (string.IsNullOrEmpty(p1)) p1 = "Player 1";
