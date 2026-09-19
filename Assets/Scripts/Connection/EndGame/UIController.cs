@@ -47,7 +47,6 @@ public class UIController : MonoBehaviourPunCallbacks
     {
         Debug.Log("[UIController] DisplayPanel invoked!");
 
-        // تفعيل الأوبجيكت والوالد (الـ Canvas)
         gameObject.SetActive(true);
 
         if (transform.parent != null && !transform.parent.gameObject.activeSelf)
@@ -113,21 +112,19 @@ public class UIController : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
 
-        
-       LoadExitScene();
+        LoadExitScene();
     }
 
     public override void OnLeftRoom()
     {
         if (IsExitingGame)
-    {
-        LoadExitScene();
-    }
+        {
+            LoadExitScene();
+        }
     }
 
     public void LoadExitScene()
     {
-        // IsExitingGame = false;
         if (CurtainTransition.Instance != null)
             CurtainTransition.Instance.LoadScene("exit game");
         else
@@ -139,6 +136,4 @@ public class UIController : MonoBehaviourPunCallbacks
         if (endPanelContainer != null) endPanelContainer.SetActive(false);
         if (inGameMenuObject != null) inGameMenuObject.SetActive(true);
     }
-
-   
 }

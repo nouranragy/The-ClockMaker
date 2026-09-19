@@ -2223,8 +2223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
   uiController: {fileID: 0}
-  puzzle1TargetTime: 10
-  puzzle2TargetTime: 10
+  puzzle1TargetTime: 180
+  puzzle2TargetTime: 180
 --- !u!114 &787014840
 MonoBehaviour:
   m_ObjectHideFlags: 0

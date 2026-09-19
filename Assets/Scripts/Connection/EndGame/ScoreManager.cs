@@ -10,9 +10,9 @@ public class ScoreManager : MonoBehaviourPunCallbacks
     [Header("Dependencies")]
     public UIController uiController;
 
-    [Header("Puzzle Target Times (For 3 Stars)")]
-    public float puzzle1TargetTime = 10f;
-    public float puzzle2TargetTime = 10f;
+    [Header("Puzzle Target Times (3 Min Each = 180s)")]
+    public float puzzle1TargetTime = 180f;
+    public float puzzle2TargetTime = 180f;
 
     private double p1StartTime;
     private double p2StartTime;
@@ -23,15 +23,13 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
-
         transform.SetParent(null);
 
-    // 2. منع Photon من تدميره عند تحميل السينات
-    if (GetComponent<PhotonView>() != null)
-    {
-        PhotonNetwork.RegisterPhotonView(GetComponent<PhotonView>());
-    }
-    
+        if (GetComponent<PhotonView>() != null)
+        {
+            PhotonNetwork.RegisterPhotonView(GetComponent<PhotonView>());
+        }
+
         if (Instance == null)
         {
             Instance = this;
@@ -55,11 +53,6 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void Start()
-   {
-    Debug.Log($"[ScoreManager] I am alive in scene: {SceneManager.GetActiveScene().name} on GameObject: {gameObject.name}");
-   }
-
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         uiController = Object.FindFirstObjectByType<UIController>(FindObjectsInactive.Include);
@@ -78,6 +71,7 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         puzzle2TimeSpent = 0;
     }
 
+    // --- PUZZLE 1 ---
     public void StartPuzzle1()
     {
         if (isP1Running) return;
@@ -89,10 +83,12 @@ public class ScoreManager : MonoBehaviourPunCallbacks
     {
         p1StartTime = startTime;
         isP1Running = true;
+        Debug.Log($"[ScoreManager] Puzzle 1 Started at {p1StartTime}");
     }
 
     public void SolvePuzzle1()
     {
+        if (!isP1Running) return;
         photonView.RPC(nameof(RPC_SolvePuzzle1), RpcTarget.All, PhotonNetwork.Time);
     }
 
@@ -102,12 +98,12 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         if (isP1Running)
         {
             puzzle1TimeSpent = (float)(stopTime - p1StartTime);
+            isP1Running = false;
         }
-        isP1Running = false;
-        Debug.Log($"[ScoreManager] Puzzle 1 Solved in: {puzzle1TimeSpent} seconds!");
-        // FinishGame();
+        Debug.Log($"[ScoreManager] Puzzle 1 Solved in: {puzzle1TimeSpent}s");
     }
 
+    // --- PUZZLE 2 ---
     public void StartPuzzle2()
     {
         if (isP2Running) return;
@@ -119,35 +115,39 @@ public class ScoreManager : MonoBehaviourPunCallbacks
     {
         p2StartTime = startTime;
         isP2Running = true;
-    }
-
-    public float GetCurrentActiveTime()
-    {
-        if (isP1Running) return Mathf.Max(0f, puzzle1TargetTime - (float)(PhotonNetwork.Time - p1StartTime));
-        else if (isP2Running) return Mathf.Max(0f, puzzle2TargetTime - (float)(PhotonNetwork.Time - p2StartTime));
-        return 0f;
+        Debug.Log($"[ScoreManager] Puzzle 2 Started at {p2StartTime}");
     }
 
     public void SolvePuzzle2AndOpenDoor()
     {
-        // if (!isP2Running) return;
         photonView.RPC(nameof(RPC_SolvePuzzle2AndFinish), RpcTarget.All, PhotonNetwork.Time);
     }
 
     [PunRPC]
     private void RPC_SolvePuzzle2AndFinish(double stopTime)
     {
-        if (isP2Running)
+        // Strictly calculate Puzzle 2 independently from p2StartTime
+        if (isP2Running && p2StartTime > 0)
         {
             puzzle2TimeSpent = (float)(stopTime - p2StartTime);
         }
         else
         {
-            puzzle2TimeSpent = (float)(stopTime - p1StartTime);
+            // Safeguard: If StartPuzzle2 was never triggered, measure time spent on Puzzle 2
+            puzzle2TimeSpent = (float)(stopTime - (p1StartTime + puzzle1TimeSpent));
         }
+
         isP2Running = false;
-        
+        Debug.Log($"[ScoreManager] Puzzle 2 Solved in: {puzzle2TimeSpent}s");
+
         FinishGame();
+    }
+
+    public float GetCurrentActiveTime()
+    {
+        if (isP1Running) return Mathf.Max(0f, puzzle1TargetTime - (float)(PhotonNetwork.Time - p1StartTime));
+        if (isP2Running) return Mathf.Max(0f, puzzle2TargetTime - (float)(PhotonNetwork.Time - p2StartTime));
+        return 0f;
     }
 
     private void FinishGame()
@@ -180,7 +180,9 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         {
             playerNames = PlayerPrefs.GetString("HighScore_Players", combinedNames),
             puzzle1CompletedTime = PlayerPrefs.GetFloat("HighScore_Avg", currentResult.AverageTime) / 2f,
-            puzzle2CompletedTime = PlayerPrefs.GetFloat("HighScore_Avg", currentResult.AverageTime) / 2f
+            puzzle2CompletedTime = PlayerPrefs.GetFloat("HighScore_Avg", currentResult.AverageTime) / 2f,
+            puzzle1TargetTime = puzzle1TargetTime,
+            puzzle2TargetTime = puzzle2TargetTime
         };
 
         if (uiController == null)
