@@ -3517,54 +3517,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5637184544003710491, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -591
-      objectReference: {fileID: 0}
-    - target: {fileID: 6122718315889699032, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6263867520141385263, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
       propertyPath: m_Name
       value: Canvas (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 6263867520141385263, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7016100073438562554, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7255069092424924641, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: duration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7255069092424924641, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: leftOpenPosition.x
-      value: -582
-      objectReference: {fileID: 0}
-    - target: {fileID: 7255069092424924641, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: rightOpenPosition.x
-      value: 617
-      objectReference: {fileID: 0}
-    - target: {fileID: 7255069092424924641, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: leftClosedPosition.x
-      value: -193
-      objectReference: {fileID: 0}
-    - target: {fileID: 7255069092424924641, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: rightClosedPosition.x
-      value: 209
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579170845643620171, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 619
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2830237122052760287, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-    - {fileID: 2054820081057818739, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
-    - {fileID: 4463824198667315237, guid: 86d5642411dfe4448b99c9d2614d3039, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
