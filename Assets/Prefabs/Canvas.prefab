@@ -229,7 +229,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 648410429142327595}
-  - component: {fileID: 2054820081057818739}
   - component: {fileID: 7255069092424924641}
   m_Layer: 5
   m_Name: curtains
@@ -256,31 +255,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: 0}
+  m_AnchoredPosition: {x: -20, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &2054820081057818739
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869709209133841951}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d1115f14b60c1146b7ae8c2c4973a49, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7255069092424924641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,11 +272,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CurtainTransition
   leftCurtain: {fileID: 5637184544003710491}
   rightCurtain: {fileID: 7579170845643620171}
-  leftOpenPosition: {x: -196, y: -0.000015259}
-  rightOpenPosition: {x: 575, y: -0.000015259}
-  leftClosedPosition: {x: -542, y: -0.000015259}
-  rightClosedPosition: {x: 205, y: -0.000015259}
+  leftOpenPosition: {x: -582, y: -0.000015259}
+  rightOpenPosition: {x: 617, y: -0.000015259}
+  leftClosedPosition: {x: -193, y: -0.000015259}
+  rightClosedPosition: {x: 209, y: -0.000015259}
   duration: 1
+  easeType: 7
 --- !u!1 &3972501121165641695
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +289,6 @@ GameObject:
   - component: {fileID: 7579170845643620171}
   - component: {fileID: 7228057814381645472}
   - component: {fileID: 6303591503660992848}
-  - component: {fileID: 4463824198667315237}
   m_Layer: 5
   m_Name: right curtain
   m_TagString: Untagged
@@ -326,16 +303,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3972501121165641695}
-  m_LocalRotation: {x: -0, y: 0.999182, z: -0, w: 0.040440846}
+  m_LocalRotation: {x: -0, y: -0.08113238, z: -0, w: 0.9967034}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 648410429142327595}
-  m_LocalEulerAnglesHint: {x: 0, y: 175.365, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -9.307, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 205, y: -0.000015259}
+  m_AnchoredPosition: {x: 627, y: -0.000015259}
   m_SizeDelta: {x: 415.48, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7228057814381645472
@@ -359,14 +336,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2301654661609026495, guid: cae48c518eed9174996067a3a604ac5c, type: 3}
+  m_Sprite: {fileID: -4299264627438423110, guid: 0f5ac1da84d49c94496385ba70dd1a24, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -376,28 +353,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &4463824198667315237
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3972501121165641695}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7579d9001a4b43a4f91cdb63a424b409, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4189841032958081757
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +637,6 @@ GameObject:
   - component: {fileID: 5637184544003710491}
   - component: {fileID: 5825849921932776840}
   - component: {fileID: 3697038051883601393}
-  - component: {fileID: 2830237122052760287}
   m_Layer: 5
   m_Name: left curtain
   m_TagString: Untagged
@@ -706,7 +660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -196, y: -0.000015259}
+  m_AnchoredPosition: {x: -578, y: -0.000015259}
   m_SizeDelta: {x: 390.3964, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5825849921932776840
@@ -730,14 +684,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2301654661609026495, guid: cae48c518eed9174996067a3a604ac5c, type: 3}
+  m_Sprite: {fileID: -1793247539554607491, guid: 8930513281e70ef40bce21bdab1455df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -747,28 +701,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &2830237122052760287
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122718315889699032}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2a690c1d558bc6d408eb0bfe29a9f790, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6263867520141385263
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +759,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 999
