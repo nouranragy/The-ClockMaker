@@ -30,6 +30,11 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         if (Instance != null && Instance != this)
         {
             Debug.Log("[ScoreManager] Duplicate ScoreManager detected on scene load. Destroying duplicate.");
+          PhotonView pv = GetComponent<PhotonView>();
+        if (pv != null)
+        {
+            pv.ViewID = 0; // إزالة الـ ID المكرر حتى لا يتعارض مع الشبكة
+        }
             Destroy(gameObject);
             return; // Exit early so PhotonView registration doesn't run on the duplicate!
         }
@@ -37,10 +42,10 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        if (GetComponent<PhotonView>() != null)
-        {
-            PhotonNetwork.RegisterPhotonView(GetComponent<PhotonView>());
-        }
+        // if (GetComponent<PhotonView>() != null)
+        // {
+        //     PhotonNetwork.RegisterPhotonView(GetComponent<PhotonView>());
+        // }
     }
 
     public override void OnEnable()
